@@ -1,8 +1,10 @@
 import sys
 from antlr4 import *
-from gen import LexerGo
-from gen import ParserGo
-from gen import ParserGoListener
+from lexanalyz.gen import LexerGo
+from lexanalyz.gen import LexerGo
+from lexanalyz.gen import ParserGo
+from lexanalyz.gen import ParserGoListener
+
 
 
 def main(argv):
