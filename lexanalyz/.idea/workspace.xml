@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="931a2e66-8a06-4b8b-a2d2-6c1f55563256" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1XQCiBCV6PUUmhutqUaNi5QhmlU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="$PROJECT_DIR$/Grammar/LexerGo.g4::/auto-gen" value="false" />
+    <property name="$PROJECT_DIR$/Grammar/LexerGo.g4::/gen-listener" value="true" />
+    <property name="$PROJECT_DIR$/Grammar/LexerGo.g4::/gen-visitor" value="false" />
+    <property name="$PROJECT_DIR$/Grammar/LexerGo.g4::/language" value="python3" />
+    <property name="$PROJECT_DIR$/Grammar/ParserGo.g4::/auto-gen" value="false" />
+    <property name="$PROJECT_DIR$/Grammar/ParserGo.g4::/gen-listener" value="true" />
+    <property name="$PROJECT_DIR$/Grammar/ParserGo.g4::/gen-visitor" value="false" />
+    <property name="$PROJECT_DIR$/Grammar/ParserGo.g4::/language" value="Python3" />
+    <property name="$PROJECT_DIR$/GrammarGo.g4::/auto-gen" value="false" />
+    <property name="$PROJECT_DIR$/GrammarGo.g4::/gen-listener" value="true" />
+    <property name="$PROJECT_DIR$/GrammarGo.g4::/gen-visitor" value="false" />
+    <property name="$PROJECT_DIR$/GrammarGo.g4::/language" value="Python3" />
+    <property name="$PROJECT_DIR$/LexerGo.g4::/auto-gen" value="false" />
+    <property name="$PROJECT_DIR$/LexerGo.g4::/gen-listener" value="true" />
+    <property name="$PROJECT_DIR$/LexerGo.g4::/gen-visitor" value="false" />
+    <property name="$PROJECT_DIR$/LexerGo.g4::/language" value="Python3" />
+    <property name="$PROJECT_DIR$/ParserGo.g4::/auto-gen" value="false" />
+    <property name="$PROJECT_DIR$/ParserGo.g4::/gen-listener" value="true" />
+    <property name="$PROJECT_DIR$/ParserGo.g4::/gen-visitor" value="false" />
+    <property name="$PROJECT_DIR$/ParserGo.g4::/language" value="Python3" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Python\compiler\lexanalyz" />
+      <recent name="D:\Python\compiler\lexanalyz\gen" />
+      <recent name="D:\Python\compiler\lexanalyz\Grammar" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.lexanalyzator">
+    <configuration name="GrammarGo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="lexanalyz" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gen" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gen/GrammarGo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="LexerGo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="lexanalyz" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gen" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gen/LexerGo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ParserGo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="lexanalyz" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gen" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gen/ParserGo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="lexanalyz" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="lexanalyz" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lexanalyz.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="lexanalyzator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="lexanalyz" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\Python\compiler\lexanalyz\lexanalyzator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.lexanalyzator" />
+        <item itemvalue="Python.LexerGo" />
+        <item itemvalue="Python.ParserGo" />
+        <item itemvalue="Python.GrammarGo" />
+        <item itemvalue="Python.lexanalyz" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="931a2e66-8a06-4b8b-a2d2-6c1f55563256" name="Default Changelist" comment="" />
+      <created>1580969055822</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580969055822</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.g4" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="360" y="70" key="#Custom_Plugin_Repositories" timestamp="1582725510361">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="360" y="70" key="#Custom_Plugin_Repositories/0.0.1536.824@0.0.1536.824" timestamp="1582725510361" />
+    <state x="447" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580970542418">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="447" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1580970542418" />
+    <state x="512" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582717101200">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="512" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1582717101200" />
+    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1582725588468">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582725588468" />
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1582792247464">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582792247464" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1582792247464">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582792247464" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1582792247464">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582792247464" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1582792247464">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582792247464" />
+    <state width="1515" height="223" key="GridCell.Tab.1.bottom" timestamp="1581676904018">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="223" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581676904018" />
+    <state width="1515" height="223" key="GridCell.Tab.1.center" timestamp="1581676904018">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="223" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1581676904018" />
+    <state width="1515" height="223" key="GridCell.Tab.1.left" timestamp="1581676904018">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="223" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1581676904018" />
+    <state width="1515" height="223" key="GridCell.Tab.1.right" timestamp="1581676904018">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="223" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1581676904018" />
+    <state x="277" y="54" key="SettingsEditor" timestamp="1582787354926">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1582787354926" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1583387561738">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583387561738" />
+    <state x="341" y="148" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1581580064835">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="341" y="148" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1581580064835" />
+    <state x="814" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1582788539454">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="814" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1582788539454" />
+  </component>
+</project>
