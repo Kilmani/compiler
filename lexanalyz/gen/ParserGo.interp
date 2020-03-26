@@ -216,7 +216,7 @@ arrayLength
 elementType
 pointerType
 interfaceType
-sliceType
+r_sliceType
 mapType
 channelType
 methodSpec
@@ -248,7 +248,7 @@ string_
 anonymousField
 functionLit
 index
-slice
+r_slice
 typeAssertion
 arguments
 methodExpr

@@ -1,9 +1,10 @@
-# Generated from D:/Python/compiler/lexanalyz\ParserGo.g4 by ANTLR 4.7.2
+# Generated from D:/Python/compiler/lexanalyz\ParserGo.g4 by ANTLR 4.8
 from antlr4 import *
+from lexanalyz.gen import ParserGo
 if __name__ is not None and "." in __name__:
     from .ParserGo import ParserGo
 else:
-    from ParserGo import ParserGo
+    from lexanalyz.gen import ParserGo
 
 # This class defines a complete listener for a parse tree produced by ParserGo.
 class ParserGoListener(ParseTreeListener):
@@ -557,12 +558,12 @@ class ParserGoListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by ParserGo#sliceType.
-    def enterSliceType(self, ctx:ParserGo.SliceTypeContext):
+    # Enter a parse tree produced by ParserGo#r_sliceType.
+    def enterR_sliceType(self, ctx:ParserGo.R_sliceTypeContext):
         pass
 
-    # Exit a parse tree produced by ParserGo#sliceType.
-    def exitSliceType(self, ctx:ParserGo.SliceTypeContext):
+    # Exit a parse tree produced by ParserGo#r_sliceType.
+    def exitR_sliceType(self, ctx:ParserGo.R_sliceTypeContext):
         pass
 
 
@@ -845,12 +846,12 @@ class ParserGoListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by ParserGo#slice.
-    def enterSlice(self, ctx:ParserGo.SliceContext):
+    # Enter a parse tree produced by ParserGo#r_slice.
+    def enterR_slice(self, ctx:ParserGo.R_sliceContext):
         pass
 
-    # Exit a parse tree produced by ParserGo#slice.
-    def exitSlice(self, ctx:ParserGo.SliceContext):
+    # Exit a parse tree produced by ParserGo#r_slice.
+    def exitR_slice(self, ctx:ParserGo.R_sliceContext):
         pass
 
 
@@ -899,3 +900,5 @@ class ParserGoListener(ParseTreeListener):
         pass
 
 
+
+del ParserGo

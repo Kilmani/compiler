@@ -260,7 +260,7 @@ typeLit
     | pointerType
     | functionType
     | interfaceType
-    | r_sliceType
+    | sliceType
     | mapType
     | channelType
     ;
@@ -285,7 +285,7 @@ interfaceType
     : 'interface' '{' (methodSpec eos)* '}'
     ;
 
-r_sliceType
+sliceType
     : '[' ']' elementType
     ;
 
@@ -341,7 +341,7 @@ primaryExpr
     | conversion
     | primaryExpr ( DOT IDENTIFIER
                   | index
-                  | r_slice
+                  | slice
                   | typeAssertion
                   | arguments)
     ;
@@ -402,7 +402,7 @@ literalType
     : structType
     | arrayType
     | '[' '...' ']' elementType
-    | r_sliceType
+    | sliceType
     | mapType
     | typeName
     ;
@@ -455,7 +455,7 @@ index
     : '[' expression ']'
     ;
 
-r_slice
+slice
     : '[' (expression? ':' expression? | expression? ':' expression ':' expression) ']'
     ;
 
