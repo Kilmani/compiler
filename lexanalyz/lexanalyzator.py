@@ -2,15 +2,19 @@ import sys
 from antlr4 import *
 from lexanalyz.gen.LexerGo import LexerGo
 from lexanalyz.gen.ParserGo import ParserGo
-#from lexanalyz.gen import ParserGoListener
+from lexanalyz.gen import ParserGoListener
 
-def main(argv):
-    input_stream = FileStream(argv[0])
-    lexer = LexerGo(input_stream)
-    stream = CommonTokenStream(lexer)
-    parser = ParserGo(stream)
-    tree = parser.Parse
 
-    print(tree)
+class ParserGoListener(ParserGoListener):
+    def enterHi(self, ctx):
+        print("Hello: %s" % ctx.ID())
+    def main(argv):
+        lexer = LexerGo(StdinStream())
+        stream = CommonTokenStream(lexer)
+        parser = ParserGo(stream)
+        tree = parser.hi()
+        printer = ParserGoListener()
+        walker = ParseTreeWalker()
+        walker.walk(printer, tree)
 if __name__ == '__main__':
     main(sys.argv)

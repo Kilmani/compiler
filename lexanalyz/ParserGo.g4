@@ -54,7 +54,6 @@ typeSpec
     : IDENTIFIER ASSIGN? type_
     ;
 
-// Function declarations
 
 functionDecl
     : 'func' IDENTIFIER (signature block?)
