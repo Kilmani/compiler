@@ -1,6 +1,5 @@
 # Generated from D:/Python/compiler/lexanalyz\ParserGo.g4 by ANTLR 4.8
 from antlr4 import *
-from lexanalyz.gen import ParserGo
 if __name__ is not None and "." in __name__:
     from .ParserGo import ParserGo
 else:

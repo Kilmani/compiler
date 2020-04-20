@@ -1,14 +1,12 @@
 # Generated from D:/Python/compiler/lexanalyz\ParserGo.g4 by ANTLR 4.8
 # encoding: utf-8
 from antlr4 import *
-
 from io import StringIO
 import sys
-
 if sys.version_info[1] > 5:
-    from typing import TextIO
+	from typing import TextIO
 else:
-    from typing.io import TextIO
+	from typing.io import TextIO
 
 
 def serializedATN():
@@ -477,43 +475,44 @@ def serializedATN():
         return buf.getvalue()
 
 
-class ParserGo(Parser):
+class ParserGo ( Parser ):
+
     grammarFileName = "ParserGo.g4"
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
-    decisionsToDFA = [DFA(ds, i) for i, ds in enumerate(atn.decisionToState)]
+    decisionsToDFA = [ DFA(ds, i) for i, ds in enumerate(atn.decisionToState) ]
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = ["<INVALID>", "'break'", "'default'", "'func'", "'interface'",
-                    "'select'", "'case'", "'defer'", "'go'", "'map'", "'struct'",
-                    "'chan'", "'else'", "'goto'", "'package'", "'switch'",
-                    "'const'", "'fallthrough'", "'if'", "'range'", "'type'",
-                    "'continue'", "'for'", "'import'", "'return'", "'var'",
-                    "'nil'", "<INVALID>", "'('", "')'", "'{'", "'}'", "'['",
-                    "']'", "'='", "','", "';'", "':'", "'.'", "'++'", "'--'",
-                    "':='", "'...'", "'||'", "'&&'", "'=='", "'!='", "'<'",
-                    "'<='", "'>'", "'>='", "'|'", "'/'", "'%'", "'<<'",
-                    "'>>'", "'&^'", "'!'", "'+'", "'-'", "'^'", "'*'",
-                    "'&'", "'<-'"]
+    literalNames = [ "<INVALID>", "'break'", "'default'", "'func'", "'interface'", 
+                     "'select'", "'case'", "'defer'", "'go'", "'map'", "'struct'", 
+                     "'chan'", "'else'", "'goto'", "'package'", "'switch'", 
+                     "'const'", "'fallthrough'", "'if'", "'range'", "'type'", 
+                     "'continue'", "'for'", "'import'", "'return'", "'var'", 
+                     "'nil'", "<INVALID>", "'('", "')'", "'{'", "'}'", "'['", 
+                     "']'", "'='", "','", "';'", "':'", "'.'", "'++'", "'--'", 
+                     "':='", "'...'", "'||'", "'&&'", "'=='", "'!='", "'<'", 
+                     "'<='", "'>'", "'>='", "'|'", "'/'", "'%'", "'<<'", 
+                     "'>>'", "'&^'", "'!'", "'+'", "'-'", "'^'", "'*'", 
+                     "'&'", "'<-'" ]
 
-    symbolicNames = ["<INVALID>", "BREAK", "DEFAULT", "FUNC", "INTERFACE",
-                     "SELECT", "CASE", "DEFER", "GO", "MAP", "STRUCT",
-                     "CHAN", "ELSE", "GOTO", "PACKAGE", "SWITCH", "CONST",
-                     "FALLTHROUGH", "IF", "RANGE", "TYPE", "CONTINUE",
-                     "FOR", "IMPORT", "RETURN", "VAR", "NIL_LIT", "IDENTIFIER",
-                     "L_PAREN", "R_PAREN", "L_CURLY", "R_CURLY", "L_BRACKET",
-                     "R_BRACKET", "ASSIGN", "COMMA", "SEMI", "COLON", "DOT",
-                     "PLUS_PLUS", "MINUS_MINUS", "DECLARE_ASSIGN", "ELLIPSIS",
-                     "LOGICAL_OR", "LOGICAL_AND", "EQUALS", "NOT_EQUALS",
-                     "LESS", "LESS_OR_EQUALS", "GREATER", "GREATER_OR_EQUALS",
-                     "OR", "DIV", "MOD", "LSHIFT", "RSHIFT", "BIT_CLEAR",
-                     "EXCLAMATION", "PLUS", "MINUS", "CARET", "STAR", "AMPERSAND",
-                     "RECEIVE", "DECIMAL_LIT", "OCTAL_LIT", "HEX_LIT",
-                     "FLOAT_LIT", "IMAGINARY_LIT", "RUNE_LIT", "RAW_STRING_LIT",
-                     "INTERPRETED_STRING_LIT", "WS", "COMMENT", "TERMINATOR",
-                     "LINE_COMMENT"]
+    symbolicNames = [ "<INVALID>", "BREAK", "DEFAULT", "FUNC", "INTERFACE", 
+                      "SELECT", "CASE", "DEFER", "GO", "MAP", "STRUCT", 
+                      "CHAN", "ELSE", "GOTO", "PACKAGE", "SWITCH", "CONST", 
+                      "FALLTHROUGH", "IF", "RANGE", "TYPE", "CONTINUE", 
+                      "FOR", "IMPORT", "RETURN", "VAR", "NIL_LIT", "IDENTIFIER", 
+                      "L_PAREN", "R_PAREN", "L_CURLY", "R_CURLY", "L_BRACKET", 
+                      "R_BRACKET", "ASSIGN", "COMMA", "SEMI", "COLON", "DOT", 
+                      "PLUS_PLUS", "MINUS_MINUS", "DECLARE_ASSIGN", "ELLIPSIS", 
+                      "LOGICAL_OR", "LOGICAL_AND", "EQUALS", "NOT_EQUALS", 
+                      "LESS", "LESS_OR_EQUALS", "GREATER", "GREATER_OR_EQUALS", 
+                      "OR", "DIV", "MOD", "LSHIFT", "RSHIFT", "BIT_CLEAR", 
+                      "EXCLAMATION", "PLUS", "MINUS", "CARET", "STAR", "AMPERSAND", 
+                      "RECEIVE", "DECIMAL_LIT", "OCTAL_LIT", "HEX_LIT", 
+                      "FLOAT_LIT", "IMAGINARY_LIT", "RUNE_LIT", "RAW_STRING_LIT", 
+                      "INTERPRETED_STRING_LIT", "WS", "COMMENT", "TERMINATOR", 
+                      "LINE_COMMENT" ]
 
     RULE_sourceFile = 0
     RULE_packageClause = 1
@@ -615,175 +614,187 @@ class ParserGo(Parser):
     RULE_receiverType = 97
     RULE_eos = 98
 
-    ruleNames = ["sourceFile", "packageClause", "importDecl", "importSpec",
-                 "importPath", "declaration", "constDecl", "constSpec",
-                 "identifierList", "expressionList", "typeDecl", "typeSpec",
-                 "functionDecl", "methodDecl", "receiver", "varDecl",
-                 "varSpec", "block", "statementList", "statement", "simpleStmt",
-                 "expressionStmt", "sendStmt", "incDecStmt", "assignment",
-                 "assign_op", "shortVarDecl", "emptyStmt", "labeledStmt",
-                 "returnStmt", "breakStmt", "continueStmt", "gotoStmt",
-                 "fallthroughStmt", "deferStmt", "ifStmt", "switchStmt",
-                 "exprSwitchStmt", "exprCaseClause", "exprSwitchCase",
-                 "typeSwitchStmt", "typeSwitchGuard", "typeCaseClause",
-                 "typeSwitchCase", "typeList", "selectStmt", "commClause",
-                 "commCase", "recvStmt", "forStmt", "forClause", "rangeClause",
-                 "goStmt", "type_", "typeName", "typeLit", "arrayType",
-                 "arrayLength", "elementType", "pointerType", "interfaceType",
-                 "r_sliceType", "mapType", "channelType", "methodSpec",
-                 "functionType", "signature", "result", "parameters",
-                 "parameterDecl", "expression", "primaryExpr", "unaryExpr",
-                 "conversion", "operand", "literal", "basicLit", "integer",
-                 "operandName", "qualifiedIdent", "compositeLit", "literalType",
-                 "literalValue", "elementList", "keyedElement", "key",
-                 "element", "structType", "fieldDecl", "string_", "anonymousField",
-                 "functionLit", "index", "r_slice", "typeAssertion", "arguments",
-                 "methodExpr", "receiverType", "eos"]
+    ruleNames =  [ "sourceFile", "packageClause", "importDecl", "importSpec", 
+                   "importPath", "declaration", "constDecl", "constSpec", 
+                   "identifierList", "expressionList", "typeDecl", "typeSpec", 
+                   "functionDecl", "methodDecl", "receiver", "varDecl", 
+                   "varSpec", "block", "statementList", "statement", "simpleStmt", 
+                   "expressionStmt", "sendStmt", "incDecStmt", "assignment", 
+                   "assign_op", "shortVarDecl", "emptyStmt", "labeledStmt", 
+                   "returnStmt", "breakStmt", "continueStmt", "gotoStmt", 
+                   "fallthroughStmt", "deferStmt", "ifStmt", "switchStmt", 
+                   "exprSwitchStmt", "exprCaseClause", "exprSwitchCase", 
+                   "typeSwitchStmt", "typeSwitchGuard", "typeCaseClause", 
+                   "typeSwitchCase", "typeList", "selectStmt", "commClause", 
+                   "commCase", "recvStmt", "forStmt", "forClause", "rangeClause", 
+                   "goStmt", "type_", "typeName", "typeLit", "arrayType", 
+                   "arrayLength", "elementType", "pointerType", "interfaceType", 
+                   "r_sliceType", "mapType", "channelType", "methodSpec", 
+                   "functionType", "signature", "result", "parameters", 
+                   "parameterDecl", "expression", "primaryExpr", "unaryExpr", 
+                   "conversion", "operand", "literal", "basicLit", "integer", 
+                   "operandName", "qualifiedIdent", "compositeLit", "literalType", 
+                   "literalValue", "elementList", "keyedElement", "key", 
+                   "element", "structType", "fieldDecl", "string_", "anonymousField", 
+                   "functionLit", "index", "r_slice", "typeAssertion", "arguments", 
+                   "methodExpr", "receiverType", "eos" ]
 
     EOF = Token.EOF
-    BREAK = 1
-    DEFAULT = 2
-    FUNC = 3
-    INTERFACE = 4
-    SELECT = 5
-    CASE = 6
-    DEFER = 7
-    GO = 8
-    MAP = 9
-    STRUCT = 10
-    CHAN = 11
-    ELSE = 12
-    GOTO = 13
-    PACKAGE = 14
-    SWITCH = 15
-    CONST = 16
-    FALLTHROUGH = 17
-    IF = 18
-    RANGE = 19
-    TYPE = 20
-    CONTINUE = 21
-    FOR = 22
-    IMPORT = 23
-    RETURN = 24
-    VAR = 25
-    NIL_LIT = 26
-    IDENTIFIER = 27
-    L_PAREN = 28
-    R_PAREN = 29
-    L_CURLY = 30
-    R_CURLY = 31
-    L_BRACKET = 32
-    R_BRACKET = 33
-    ASSIGN = 34
-    COMMA = 35
-    SEMI = 36
-    COLON = 37
-    DOT = 38
-    PLUS_PLUS = 39
-    MINUS_MINUS = 40
-    DECLARE_ASSIGN = 41
-    ELLIPSIS = 42
-    LOGICAL_OR = 43
-    LOGICAL_AND = 44
-    EQUALS = 45
-    NOT_EQUALS = 46
-    LESS = 47
-    LESS_OR_EQUALS = 48
-    GREATER = 49
-    GREATER_OR_EQUALS = 50
-    OR = 51
-    DIV = 52
-    MOD = 53
-    LSHIFT = 54
-    RSHIFT = 55
-    BIT_CLEAR = 56
-    EXCLAMATION = 57
-    PLUS = 58
-    MINUS = 59
-    CARET = 60
-    STAR = 61
-    AMPERSAND = 62
-    RECEIVE = 63
-    DECIMAL_LIT = 64
-    OCTAL_LIT = 65
-    HEX_LIT = 66
-    FLOAT_LIT = 67
-    IMAGINARY_LIT = 68
-    RUNE_LIT = 69
-    RAW_STRING_LIT = 70
-    INTERPRETED_STRING_LIT = 71
-    WS = 72
-    COMMENT = 73
-    TERMINATOR = 74
-    LINE_COMMENT = 75
+    BREAK=1
+    DEFAULT=2
+    FUNC=3
+    INTERFACE=4
+    SELECT=5
+    CASE=6
+    DEFER=7
+    GO=8
+    MAP=9
+    STRUCT=10
+    CHAN=11
+    ELSE=12
+    GOTO=13
+    PACKAGE=14
+    SWITCH=15
+    CONST=16
+    FALLTHROUGH=17
+    IF=18
+    RANGE=19
+    TYPE=20
+    CONTINUE=21
+    FOR=22
+    IMPORT=23
+    RETURN=24
+    VAR=25
+    NIL_LIT=26
+    IDENTIFIER=27
+    L_PAREN=28
+    R_PAREN=29
+    L_CURLY=30
+    R_CURLY=31
+    L_BRACKET=32
+    R_BRACKET=33
+    ASSIGN=34
+    COMMA=35
+    SEMI=36
+    COLON=37
+    DOT=38
+    PLUS_PLUS=39
+    MINUS_MINUS=40
+    DECLARE_ASSIGN=41
+    ELLIPSIS=42
+    LOGICAL_OR=43
+    LOGICAL_AND=44
+    EQUALS=45
+    NOT_EQUALS=46
+    LESS=47
+    LESS_OR_EQUALS=48
+    GREATER=49
+    GREATER_OR_EQUALS=50
+    OR=51
+    DIV=52
+    MOD=53
+    LSHIFT=54
+    RSHIFT=55
+    BIT_CLEAR=56
+    EXCLAMATION=57
+    PLUS=58
+    MINUS=59
+    CARET=60
+    STAR=61
+    AMPERSAND=62
+    RECEIVE=63
+    DECIMAL_LIT=64
+    OCTAL_LIT=65
+    HEX_LIT=66
+    FLOAT_LIT=67
+    IMAGINARY_LIT=68
+    RUNE_LIT=69
+    RAW_STRING_LIT=70
+    INTERPRETED_STRING_LIT=71
+    WS=72
+    COMMENT=73
+    TERMINATOR=74
+    LINE_COMMENT=75
 
-    def __init__(self, input: TokenStream, output: TextIO = sys.stdout):
+    def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
         self.checkVersion("4.8")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
+
+
+
     class SourceFileContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def packageClause(self):
-            return self.getTypedRuleContext(ParserGo.PackageClauseContext, 0)
+            return self.getTypedRuleContext(ParserGo.PackageClauseContext,0)
 
-        def eos(self, i: int = None):
+
+        def eos(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.EosContext)
             else:
-                return self.getTypedRuleContext(ParserGo.EosContext, i)
+                return self.getTypedRuleContext(ParserGo.EosContext,i)
 
-        def importDecl(self, i: int = None):
+
+        def importDecl(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.ImportDeclContext)
             else:
-                return self.getTypedRuleContext(ParserGo.ImportDeclContext, i)
+                return self.getTypedRuleContext(ParserGo.ImportDeclContext,i)
 
-        def functionDecl(self, i: int = None):
+
+        def functionDecl(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.FunctionDeclContext)
             else:
-                return self.getTypedRuleContext(ParserGo.FunctionDeclContext, i)
+                return self.getTypedRuleContext(ParserGo.FunctionDeclContext,i)
 
-        def methodDecl(self, i: int = None):
+
+        def methodDecl(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.MethodDeclContext)
             else:
-                return self.getTypedRuleContext(ParserGo.MethodDeclContext, i)
+                return self.getTypedRuleContext(ParserGo.MethodDeclContext,i)
 
-        def declaration(self, i: int = None):
+
+        def declaration(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.DeclarationContext)
             else:
-                return self.getTypedRuleContext(ParserGo.DeclarationContext, i)
+                return self.getTypedRuleContext(ParserGo.DeclarationContext,i)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_sourceFile
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterSourceFile"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSourceFile" ):
                 listener.enterSourceFile(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitSourceFile"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSourceFile" ):
                 listener.exitSourceFile(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitSourceFile"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSourceFile" ):
                 return visitor.visitSourceFile(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def sourceFile(self):
 
         localctx = ParserGo.SourceFileContext(self, self._ctx, self.state)
         self.enterRule(localctx, 0, self.RULE_sourceFile)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 198
@@ -792,24 +803,23 @@ class ParserGo(Parser):
             self.eos()
             self.state = 205
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            while _la == ParserGo.IMPORT:
+            _la = self._input.LA(1)
+            while _la==ParserGo.IMPORT:
                 self.state = 200
                 self.importDecl()
                 self.state = 201
                 self.eos()
                 self.state = 207
                 self._errHandler.sync(self)
-                _la = self.TokenStream.LA(1)
+                _la = self._input.LA(1)
 
             self.state = 217
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                    (1 << ParserGo.FUNC) | (1 << ParserGo.CONST) | (1 << ParserGo.TYPE) | (1 << ParserGo.VAR))) != 0):
+            _la = self._input.LA(1)
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.FUNC) | (1 << ParserGo.CONST) | (1 << ParserGo.TYPE) | (1 << ParserGo.VAR))) != 0):
                 self.state = 211
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self.TokenStream, 1, self._ctx)
+                la_ = self._interp.adaptivePredict(self._input,1,self._ctx)
                 if la_ == 1:
                     self.state = 208
                     self.functionDecl()
@@ -825,11 +835,12 @@ class ParserGo(Parser):
                     self.declaration()
                     pass
 
+
                 self.state = 213
                 self.eos()
                 self.state = 219
                 self._errHandler.sync(self)
-                _la = self.TokenStream.LA(1)
+                _la = self._input.LA(1)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -839,9 +850,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class PackageClauseContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -854,19 +866,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_packageClause
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterPackageClause"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPackageClause" ):
                 listener.enterPackageClause(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitPackageClause"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPackageClause" ):
                 listener.exitPackageClause(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitPackageClause"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPackageClause" ):
                 return visitor.visitPackageClause(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def packageClause(self):
 
@@ -886,20 +901,22 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ImportDeclContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def IMPORT(self):
             return self.getToken(ParserGo.IMPORT, 0)
 
-        def importSpec(self, i: int = None):
+        def importSpec(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.ImportSpecContext)
             else:
-                return self.getTypedRuleContext(ParserGo.ImportSpecContext, i)
+                return self.getTypedRuleContext(ParserGo.ImportSpecContext,i)
+
 
         def L_PAREN(self):
             return self.getToken(ParserGo.L_PAREN, 0)
@@ -907,41 +924,45 @@ class ParserGo(Parser):
         def R_PAREN(self):
             return self.getToken(ParserGo.R_PAREN, 0)
 
-        def eos(self, i: int = None):
+        def eos(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.EosContext)
             else:
-                return self.getTypedRuleContext(ParserGo.EosContext, i)
+                return self.getTypedRuleContext(ParserGo.EosContext,i)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_importDecl
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterImportDecl"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterImportDecl" ):
                 listener.enterImportDecl(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitImportDecl"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitImportDecl" ):
                 listener.exitImportDecl(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitImportDecl"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitImportDecl" ):
                 return visitor.visitImportDecl(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def importDecl(self):
 
         localctx = ParserGo.ImportDeclContext(self, self._ctx, self.state)
         self.enterRule(localctx, 4, self.RULE_importDecl)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 223
             self.match(ParserGo.IMPORT)
             self.state = 235
             self._errHandler.sync(self)
-            token = self.TokenStream.LA(1)
+            token = self._input.LA(1)
             if token in [ParserGo.IDENTIFIER, ParserGo.DOT, ParserGo.RAW_STRING_LIT, ParserGo.INTERPRETED_STRING_LIT]:
                 self.state = 224
                 self.importSpec()
@@ -951,17 +972,15 @@ class ParserGo(Parser):
                 self.match(ParserGo.L_PAREN)
                 self.state = 231
                 self._errHandler.sync(self)
-                _la = self.TokenStream.LA(1)
-                while ((((_la - 27)) & ~0x3f) == 0 and ((1 << (_la - 27)) & (
-                        (1 << (ParserGo.IDENTIFIER - 27)) | (1 << (ParserGo.DOT - 27)) | (
-                        1 << (ParserGo.RAW_STRING_LIT - 27)) | (1 << (ParserGo.INTERPRETED_STRING_LIT - 27)))) != 0):
+                _la = self._input.LA(1)
+                while ((((_la - 27)) & ~0x3f) == 0 and ((1 << (_la - 27)) & ((1 << (ParserGo.IDENTIFIER - 27)) | (1 << (ParserGo.DOT - 27)) | (1 << (ParserGo.RAW_STRING_LIT - 27)) | (1 << (ParserGo.INTERPRETED_STRING_LIT - 27)))) != 0):
                     self.state = 226
                     self.importSpec()
                     self.state = 227
                     self.eos()
                     self.state = 233
                     self._errHandler.sync(self)
-                    _la = self.TokenStream.LA(1)
+                    _la = self._input.LA(1)
 
                 self.state = 234
                 self.match(ParserGo.R_PAREN)
@@ -977,14 +996,16 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ImportSpecContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def importPath(self):
-            return self.getTypedRuleContext(ParserGo.ImportPathContext, 0)
+            return self.getTypedRuleContext(ParserGo.ImportPathContext,0)
+
 
         def DOT(self):
             return self.getToken(ParserGo.DOT, 0)
@@ -995,38 +1016,42 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_importSpec
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterImportSpec"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterImportSpec" ):
                 listener.enterImportSpec(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitImportSpec"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitImportSpec" ):
                 listener.exitImportSpec(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitImportSpec"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitImportSpec" ):
                 return visitor.visitImportSpec(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def importSpec(self):
 
         localctx = ParserGo.ImportSpecContext(self, self._ctx, self.state)
         self.enterRule(localctx, 6, self.RULE_importSpec)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 238
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            if _la == ParserGo.IDENTIFIER or _la == ParserGo.DOT:
+            _la = self._input.LA(1)
+            if _la==ParserGo.IDENTIFIER or _la==ParserGo.DOT:
                 self.state = 237
-                _la = self.TokenStream.LA(1)
-                if not (_la == ParserGo.IDENTIFIER or _la == ParserGo.DOT):
+                _la = self._input.LA(1)
+                if not(_la==ParserGo.IDENTIFIER or _la==ParserGo.DOT):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
+
 
             self.state = 240
             self.importPath()
@@ -1038,31 +1063,36 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ImportPathContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def string_(self):
-            return self.getTypedRuleContext(ParserGo.String_Context, 0)
+            return self.getTypedRuleContext(ParserGo.String_Context,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_importPath
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterImportPath"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterImportPath" ):
                 listener.enterImportPath(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitImportPath"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitImportPath" ):
                 listener.exitImportPath(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitImportPath"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitImportPath" ):
                 return visitor.visitImportPath(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def importPath(self):
 
@@ -1080,37 +1110,44 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class DeclarationContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def constDecl(self):
-            return self.getTypedRuleContext(ParserGo.ConstDeclContext, 0)
+            return self.getTypedRuleContext(ParserGo.ConstDeclContext,0)
+
 
         def typeDecl(self):
-            return self.getTypedRuleContext(ParserGo.TypeDeclContext, 0)
+            return self.getTypedRuleContext(ParserGo.TypeDeclContext,0)
+
 
         def varDecl(self):
-            return self.getTypedRuleContext(ParserGo.VarDeclContext, 0)
+            return self.getTypedRuleContext(ParserGo.VarDeclContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_declaration
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterDeclaration"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterDeclaration" ):
                 listener.enterDeclaration(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitDeclaration"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitDeclaration" ):
                 listener.exitDeclaration(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitDeclaration"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclaration" ):
                 return visitor.visitDeclaration(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def declaration(self):
 
@@ -1119,7 +1156,7 @@ class ParserGo(Parser):
         try:
             self.state = 247
             self._errHandler.sync(self)
-            token = self.TokenStream.LA(1)
+            token = self._input.LA(1)
             if token in [ParserGo.CONST]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 244
@@ -1146,20 +1183,22 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ConstDeclContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def CONST(self):
             return self.getToken(ParserGo.CONST, 0)
 
-        def constSpec(self, i: int = None):
+        def constSpec(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.ConstSpecContext)
             else:
-                return self.getTypedRuleContext(ParserGo.ConstSpecContext, i)
+                return self.getTypedRuleContext(ParserGo.ConstSpecContext,i)
+
 
         def L_PAREN(self):
             return self.getToken(ParserGo.L_PAREN, 0)
@@ -1167,41 +1206,45 @@ class ParserGo(Parser):
         def R_PAREN(self):
             return self.getToken(ParserGo.R_PAREN, 0)
 
-        def eos(self, i: int = None):
+        def eos(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.EosContext)
             else:
-                return self.getTypedRuleContext(ParserGo.EosContext, i)
+                return self.getTypedRuleContext(ParserGo.EosContext,i)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_constDecl
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterConstDecl"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterConstDecl" ):
                 listener.enterConstDecl(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitConstDecl"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitConstDecl" ):
                 listener.exitConstDecl(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitConstDecl"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConstDecl" ):
                 return visitor.visitConstDecl(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def constDecl(self):
 
         localctx = ParserGo.ConstDeclContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_constDecl)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 249
             self.match(ParserGo.CONST)
             self.state = 261
             self._errHandler.sync(self)
-            token = self.TokenStream.LA(1)
+            token = self._input.LA(1)
             if token in [ParserGo.IDENTIFIER]:
                 self.state = 250
                 self.constSpec()
@@ -1211,15 +1254,15 @@ class ParserGo(Parser):
                 self.match(ParserGo.L_PAREN)
                 self.state = 257
                 self._errHandler.sync(self)
-                _la = self.TokenStream.LA(1)
-                while _la == ParserGo.IDENTIFIER:
+                _la = self._input.LA(1)
+                while _la==ParserGo.IDENTIFIER:
                     self.state = 252
                     self.constSpec()
                     self.state = 253
                     self.eos()
                     self.state = 259
                     self._errHandler.sync(self)
-                    _la = self.TokenStream.LA(1)
+                    _la = self._input.LA(1)
 
                 self.state = 260
                 self.match(ParserGo.R_PAREN)
@@ -1235,64 +1278,68 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ConstSpecContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def identifierList(self):
-            return self.getTypedRuleContext(ParserGo.IdentifierListContext, 0)
+            return self.getTypedRuleContext(ParserGo.IdentifierListContext,0)
+
 
         def ASSIGN(self):
             return self.getToken(ParserGo.ASSIGN, 0)
 
         def expressionList(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionListContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionListContext,0)
+
 
         def type_(self):
-            return self.getTypedRuleContext(ParserGo.Type_Context, 0)
+            return self.getTypedRuleContext(ParserGo.Type_Context,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_constSpec
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterConstSpec"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterConstSpec" ):
                 listener.enterConstSpec(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitConstSpec"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitConstSpec" ):
                 listener.exitConstSpec(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitConstSpec"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConstSpec" ):
                 return visitor.visitConstSpec(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def constSpec(self):
 
         localctx = ParserGo.ConstSpecContext(self, self._ctx, self.state)
         self.enterRule(localctx, 14, self.RULE_constSpec)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 263
             self.identifierList()
             self.state = 269
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 10, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
             if la_ == 1:
                 self.state = 265
                 self._errHandler.sync(self)
-                _la = self.TokenStream.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                        (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (
-                        1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.IDENTIFIER) | (
-                                1 << ParserGo.L_PAREN) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.STAR) | (
-                                1 << ParserGo.RECEIVE))) != 0):
+                _la = self._input.LA(1)
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.STAR) | (1 << ParserGo.RECEIVE))) != 0):
                     self.state = 264
                     self.type_()
+
 
                 self.state = 267
                 self.match(ParserGo.ASSIGN)
@@ -1308,19 +1355,20 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class IdentifierListContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def IDENTIFIER(self, i: int = None):
+        def IDENTIFIER(self, i:int=None):
             if i is None:
                 return self.getTokens(ParserGo.IDENTIFIER)
             else:
                 return self.getToken(ParserGo.IDENTIFIER, i)
 
-        def COMMA(self, i: int = None):
+        def COMMA(self, i:int=None):
             if i is None:
                 return self.getTokens(ParserGo.COMMA)
             else:
@@ -1329,19 +1377,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_identifierList
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterIdentifierList"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterIdentifierList" ):
                 listener.enterIdentifierList(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitIdentifierList"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitIdentifierList" ):
                 listener.exitIdentifierList(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitIdentifierList"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIdentifierList" ):
                 return visitor.visitIdentifierList(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def identifierList(self):
 
@@ -1353,16 +1404,16 @@ class ParserGo(Parser):
             self.match(ParserGo.IDENTIFIER)
             self.state = 276
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self.TokenStream, 11, self._ctx)
-            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
-                if _alt == 1:
+            _alt = self._interp.adaptivePredict(self._input,11,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
                     self.state = 272
                     self.match(ParserGo.COMMA)
                     self.state = 273
-                    self.match(ParserGo.IDENTIFIER)
+                    self.match(ParserGo.IDENTIFIER) 
                 self.state = 278
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self.TokenStream, 11, self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,11,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1372,19 +1423,21 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ExpressionListContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def expression(self, i: int = None):
+        def expression(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.ExpressionContext)
             else:
-                return self.getTypedRuleContext(ParserGo.ExpressionContext, i)
+                return self.getTypedRuleContext(ParserGo.ExpressionContext,i)
 
-        def COMMA(self, i: int = None):
+
+        def COMMA(self, i:int=None):
             if i is None:
                 return self.getTokens(ParserGo.COMMA)
             else:
@@ -1393,19 +1446,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_expressionList
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterExpressionList"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExpressionList" ):
                 listener.enterExpressionList(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitExpressionList"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExpressionList" ):
                 listener.exitExpressionList(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitExpressionList"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExpressionList" ):
                 return visitor.visitExpressionList(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def expressionList(self):
 
@@ -1417,16 +1473,16 @@ class ParserGo(Parser):
             self.expression(0)
             self.state = 284
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self.TokenStream, 12, self._ctx)
-            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
-                if _alt == 1:
+            _alt = self._interp.adaptivePredict(self._input,12,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
                     self.state = 280
                     self.match(ParserGo.COMMA)
                     self.state = 281
-                    self.expression(0)
+                    self.expression(0) 
                 self.state = 286
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self.TokenStream, 12, self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,12,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1436,20 +1492,22 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class TypeDeclContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def TYPE(self):
             return self.getToken(ParserGo.TYPE, 0)
 
-        def typeSpec(self, i: int = None):
+        def typeSpec(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.TypeSpecContext)
             else:
-                return self.getTypedRuleContext(ParserGo.TypeSpecContext, i)
+                return self.getTypedRuleContext(ParserGo.TypeSpecContext,i)
+
 
         def L_PAREN(self):
             return self.getToken(ParserGo.L_PAREN, 0)
@@ -1457,41 +1515,45 @@ class ParserGo(Parser):
         def R_PAREN(self):
             return self.getToken(ParserGo.R_PAREN, 0)
 
-        def eos(self, i: int = None):
+        def eos(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.EosContext)
             else:
-                return self.getTypedRuleContext(ParserGo.EosContext, i)
+                return self.getTypedRuleContext(ParserGo.EosContext,i)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_typeDecl
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterTypeDecl"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTypeDecl" ):
                 listener.enterTypeDecl(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitTypeDecl"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTypeDecl" ):
                 listener.exitTypeDecl(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeDecl"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeDecl" ):
                 return visitor.visitTypeDecl(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def typeDecl(self):
 
         localctx = ParserGo.TypeDeclContext(self, self._ctx, self.state)
         self.enterRule(localctx, 20, self.RULE_typeDecl)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 287
             self.match(ParserGo.TYPE)
             self.state = 299
             self._errHandler.sync(self)
-            token = self.TokenStream.LA(1)
+            token = self._input.LA(1)
             if token in [ParserGo.IDENTIFIER]:
                 self.state = 288
                 self.typeSpec()
@@ -1501,15 +1563,15 @@ class ParserGo(Parser):
                 self.match(ParserGo.L_PAREN)
                 self.state = 295
                 self._errHandler.sync(self)
-                _la = self.TokenStream.LA(1)
-                while _la == ParserGo.IDENTIFIER:
+                _la = self._input.LA(1)
+                while _la==ParserGo.IDENTIFIER:
                     self.state = 290
                     self.typeSpec()
                     self.state = 291
                     self.eos()
                     self.state = 297
                     self._errHandler.sync(self)
-                    _la = self.TokenStream.LA(1)
+                    _la = self._input.LA(1)
 
                 self.state = 298
                 self.match(ParserGo.R_PAREN)
@@ -1525,9 +1587,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class TypeSpecContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -1535,7 +1598,8 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.IDENTIFIER, 0)
 
         def type_(self):
-            return self.getTypedRuleContext(ParserGo.Type_Context, 0)
+            return self.getTypedRuleContext(ParserGo.Type_Context,0)
+
 
         def ASSIGN(self):
             return self.getToken(ParserGo.ASSIGN, 0)
@@ -1543,35 +1607,39 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_typeSpec
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterTypeSpec"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTypeSpec" ):
                 listener.enterTypeSpec(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitTypeSpec"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTypeSpec" ):
                 listener.exitTypeSpec(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeSpec"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeSpec" ):
                 return visitor.visitTypeSpec(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def typeSpec(self):
 
         localctx = ParserGo.TypeSpecContext(self, self._ctx, self.state)
         self.enterRule(localctx, 22, self.RULE_typeSpec)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 301
             self.match(ParserGo.IDENTIFIER)
             self.state = 303
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            if _la == ParserGo.ASSIGN:
+            _la = self._input.LA(1)
+            if _la==ParserGo.ASSIGN:
                 self.state = 302
                 self.match(ParserGo.ASSIGN)
+
 
             self.state = 305
             self.type_()
@@ -1583,9 +1651,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class FunctionDeclContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -1596,27 +1665,32 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.IDENTIFIER, 0)
 
         def signature(self):
-            return self.getTypedRuleContext(ParserGo.SignatureContext, 0)
+            return self.getTypedRuleContext(ParserGo.SignatureContext,0)
+
 
         def block(self):
-            return self.getTypedRuleContext(ParserGo.BlockContext, 0)
+            return self.getTypedRuleContext(ParserGo.BlockContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_functionDecl
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterFunctionDecl"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFunctionDecl" ):
                 listener.enterFunctionDecl(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitFunctionDecl"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFunctionDecl" ):
                 listener.exitFunctionDecl(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitFunctionDecl"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionDecl" ):
                 return visitor.visitFunctionDecl(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def functionDecl(self):
 
@@ -1633,7 +1707,7 @@ class ParserGo(Parser):
             self.signature()
             self.state = 311
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 16, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,16,self._ctx)
             if la_ == 1:
                 self.state = 310
                 self.block()
@@ -1647,9 +1721,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class MethodDeclContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -1657,33 +1732,39 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.FUNC, 0)
 
         def receiver(self):
-            return self.getTypedRuleContext(ParserGo.ReceiverContext, 0)
+            return self.getTypedRuleContext(ParserGo.ReceiverContext,0)
+
 
         def IDENTIFIER(self):
             return self.getToken(ParserGo.IDENTIFIER, 0)
 
         def signature(self):
-            return self.getTypedRuleContext(ParserGo.SignatureContext, 0)
+            return self.getTypedRuleContext(ParserGo.SignatureContext,0)
+
 
         def block(self):
-            return self.getTypedRuleContext(ParserGo.BlockContext, 0)
+            return self.getTypedRuleContext(ParserGo.BlockContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_methodDecl
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterMethodDecl"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterMethodDecl" ):
                 listener.enterMethodDecl(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitMethodDecl"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitMethodDecl" ):
                 listener.exitMethodDecl(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitMethodDecl"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMethodDecl" ):
                 return visitor.visitMethodDecl(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def methodDecl(self):
 
@@ -1702,7 +1783,7 @@ class ParserGo(Parser):
             self.signature()
             self.state = 318
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 17, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,17,self._ctx)
             if la_ == 1:
                 self.state = 317
                 self.block()
@@ -1716,31 +1797,36 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ReceiverContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def parameters(self):
-            return self.getTypedRuleContext(ParserGo.ParametersContext, 0)
+            return self.getTypedRuleContext(ParserGo.ParametersContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_receiver
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterReceiver"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterReceiver" ):
                 listener.enterReceiver(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitReceiver"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitReceiver" ):
                 listener.exitReceiver(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitReceiver"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReceiver" ):
                 return visitor.visitReceiver(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def receiver(self):
 
@@ -1758,20 +1844,22 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class VarDeclContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def VAR(self):
             return self.getToken(ParserGo.VAR, 0)
 
-        def varSpec(self, i: int = None):
+        def varSpec(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.VarSpecContext)
             else:
-                return self.getTypedRuleContext(ParserGo.VarSpecContext, i)
+                return self.getTypedRuleContext(ParserGo.VarSpecContext,i)
+
 
         def L_PAREN(self):
             return self.getToken(ParserGo.L_PAREN, 0)
@@ -1779,41 +1867,45 @@ class ParserGo(Parser):
         def R_PAREN(self):
             return self.getToken(ParserGo.R_PAREN, 0)
 
-        def eos(self, i: int = None):
+        def eos(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.EosContext)
             else:
-                return self.getTypedRuleContext(ParserGo.EosContext, i)
+                return self.getTypedRuleContext(ParserGo.EosContext,i)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_varDecl
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterVarDecl"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterVarDecl" ):
                 listener.enterVarDecl(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitVarDecl"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitVarDecl" ):
                 listener.exitVarDecl(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitVarDecl"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVarDecl" ):
                 return visitor.visitVarDecl(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def varDecl(self):
 
         localctx = ParserGo.VarDeclContext(self, self._ctx, self.state)
         self.enterRule(localctx, 30, self.RULE_varDecl)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 322
             self.match(ParserGo.VAR)
             self.state = 334
             self._errHandler.sync(self)
-            token = self.TokenStream.LA(1)
+            token = self._input.LA(1)
             if token in [ParserGo.IDENTIFIER]:
                 self.state = 323
                 self.varSpec()
@@ -1823,15 +1915,15 @@ class ParserGo(Parser):
                 self.match(ParserGo.L_PAREN)
                 self.state = 330
                 self._errHandler.sync(self)
-                _la = self.TokenStream.LA(1)
-                while _la == ParserGo.IDENTIFIER:
+                _la = self._input.LA(1)
+                while _la==ParserGo.IDENTIFIER:
                     self.state = 325
                     self.varSpec()
                     self.state = 326
                     self.eos()
                     self.state = 332
                     self._errHandler.sync(self)
-                    _la = self.TokenStream.LA(1)
+                    _la = self._input.LA(1)
 
                 self.state = 333
                 self.match(ParserGo.R_PAREN)
@@ -1847,40 +1939,47 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class VarSpecContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def identifierList(self):
-            return self.getTypedRuleContext(ParserGo.IdentifierListContext, 0)
+            return self.getTypedRuleContext(ParserGo.IdentifierListContext,0)
+
 
         def type_(self):
-            return self.getTypedRuleContext(ParserGo.Type_Context, 0)
+            return self.getTypedRuleContext(ParserGo.Type_Context,0)
+
 
         def ASSIGN(self):
             return self.getToken(ParserGo.ASSIGN, 0)
 
         def expressionList(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionListContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionListContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_varSpec
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterVarSpec"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterVarSpec" ):
                 listener.enterVarSpec(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitVarSpec"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitVarSpec" ):
                 listener.exitVarSpec(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitVarSpec"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVarSpec" ):
                 return visitor.visitVarSpec(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def varSpec(self):
 
@@ -1892,19 +1991,19 @@ class ParserGo(Parser):
             self.identifierList()
             self.state = 344
             self._errHandler.sync(self)
-            token = self.TokenStream.LA(1)
-            if token in [ParserGo.FUNC, ParserGo.INTERFACE, ParserGo.MAP, ParserGo.STRUCT, ParserGo.CHAN,
-                         ParserGo.IDENTIFIER, ParserGo.L_PAREN, ParserGo.L_BRACKET, ParserGo.STAR, ParserGo.RECEIVE]:
+            token = self._input.LA(1)
+            if token in [ParserGo.FUNC, ParserGo.INTERFACE, ParserGo.MAP, ParserGo.STRUCT, ParserGo.CHAN, ParserGo.IDENTIFIER, ParserGo.L_PAREN, ParserGo.L_BRACKET, ParserGo.STAR, ParserGo.RECEIVE]:
                 self.state = 337
                 self.type_()
                 self.state = 340
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self.TokenStream, 20, self._ctx)
+                la_ = self._interp.adaptivePredict(self._input,20,self._ctx)
                 if la_ == 1:
                     self.state = 338
                     self.match(ParserGo.ASSIGN)
                     self.state = 339
                     self.expressionList()
+
 
                 pass
             elif token in [ParserGo.ASSIGN]:
@@ -1924,9 +2023,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class BlockContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -1937,56 +2037,45 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.R_CURLY, 0)
 
         def statementList(self):
-            return self.getTypedRuleContext(ParserGo.StatementListContext, 0)
+            return self.getTypedRuleContext(ParserGo.StatementListContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_block
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterBlock"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterBlock" ):
                 listener.enterBlock(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitBlock"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitBlock" ):
                 listener.exitBlock(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitBlock"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBlock" ):
                 return visitor.visitBlock(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def block(self):
 
         localctx = ParserGo.BlockContext(self, self._ctx, self.state)
         self.enterRule(localctx, 34, self.RULE_block)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 346
             self.match(ParserGo.L_CURLY)
             self.state = 348
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                    (1 << ParserGo.BREAK) | (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (
-                    1 << ParserGo.SELECT) | (1 << ParserGo.DEFER) | (1 << ParserGo.GO) | (1 << ParserGo.MAP) | (
-                            1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.GOTO) | (
-                            1 << ParserGo.SWITCH) | (1 << ParserGo.CONST) | (1 << ParserGo.FALLTHROUGH) | (
-                            1 << ParserGo.IF) | (1 << ParserGo.TYPE) | (1 << ParserGo.CONTINUE) | (
-                            1 << ParserGo.FOR) | (1 << ParserGo.RETURN) | (1 << ParserGo.VAR) | (
-                            1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (
-                            1 << ParserGo.L_CURLY) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.SEMI) | (
-                            1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (
-                            1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (
-                            1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & (
-                    (1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (
-                    1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (
-                            1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (
-                            1 << (ParserGo.RAW_STRING_LIT - 64)) | (
-                            1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
+            _la = self._input.LA(1)
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.BREAK) | (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.SELECT) | (1 << ParserGo.DEFER) | (1 << ParserGo.GO) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.GOTO) | (1 << ParserGo.SWITCH) | (1 << ParserGo.CONST) | (1 << ParserGo.FALLTHROUGH) | (1 << ParserGo.IF) | (1 << ParserGo.TYPE) | (1 << ParserGo.CONTINUE) | (1 << ParserGo.FOR) | (1 << ParserGo.RETURN) | (1 << ParserGo.VAR) | (1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (1 << ParserGo.L_CURLY) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.SEMI) | (1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (1 << (ParserGo.RAW_STRING_LIT - 64)) | (1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
                 self.state = 347
                 self.statementList()
+
 
             self.state = 350
             self.match(ParserGo.R_CURLY)
@@ -1998,77 +2087,66 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class StatementListContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def statement(self, i: int = None):
+        def statement(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.StatementContext)
             else:
-                return self.getTypedRuleContext(ParserGo.StatementContext, i)
+                return self.getTypedRuleContext(ParserGo.StatementContext,i)
 
-        def eos(self, i: int = None):
+
+        def eos(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.EosContext)
             else:
-                return self.getTypedRuleContext(ParserGo.EosContext, i)
+                return self.getTypedRuleContext(ParserGo.EosContext,i)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_statementList
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterStatementList"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterStatementList" ):
                 listener.enterStatementList(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitStatementList"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitStatementList" ):
                 listener.exitStatementList(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitStatementList"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStatementList" ):
                 return visitor.visitStatementList(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def statementList(self):
 
         localctx = ParserGo.StatementListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 36, self.RULE_statementList)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 355
+            self.state = 355 
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
+            _la = self._input.LA(1)
             while True:
                 self.state = 352
                 self.statement()
                 self.state = 353
                 self.eos()
-                self.state = 357
+                self.state = 357 
                 self._errHandler.sync(self)
-                _la = self.TokenStream.LA(1)
-                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                        (1 << ParserGo.BREAK) | (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (
-                        1 << ParserGo.SELECT) | (1 << ParserGo.DEFER) | (1 << ParserGo.GO) | (1 << ParserGo.MAP) | (
-                                1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.GOTO) | (
-                                1 << ParserGo.SWITCH) | (1 << ParserGo.CONST) | (1 << ParserGo.FALLTHROUGH) | (
-                                1 << ParserGo.IF) | (1 << ParserGo.TYPE) | (1 << ParserGo.CONTINUE) | (
-                                1 << ParserGo.FOR) | (1 << ParserGo.RETURN) | (1 << ParserGo.VAR) | (
-                                1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (
-                                1 << ParserGo.L_CURLY) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.SEMI) | (
-                                1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (
-                                1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (
-                                1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and (
-                        (1 << (_la - 64)) & ((1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (
-                        1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (
-                                                     1 << (ParserGo.IMAGINARY_LIT - 64)) | (
-                                                     1 << (ParserGo.RUNE_LIT - 64)) | (
-                                                     1 << (ParserGo.RAW_STRING_LIT - 64)) | (
-                                                     1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0)):
+                _la = self._input.LA(1)
+                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.BREAK) | (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.SELECT) | (1 << ParserGo.DEFER) | (1 << ParserGo.GO) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.GOTO) | (1 << ParserGo.SWITCH) | (1 << ParserGo.CONST) | (1 << ParserGo.FALLTHROUGH) | (1 << ParserGo.IF) | (1 << ParserGo.TYPE) | (1 << ParserGo.CONTINUE) | (1 << ParserGo.FOR) | (1 << ParserGo.RETURN) | (1 << ParserGo.VAR) | (1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (1 << ParserGo.L_CURLY) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.SEMI) | (1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (1 << (ParserGo.RAW_STRING_LIT - 64)) | (1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0)):
                     break
 
         except RecognitionException as re:
@@ -2079,73 +2157,92 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class StatementContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def declaration(self):
-            return self.getTypedRuleContext(ParserGo.DeclarationContext, 0)
+            return self.getTypedRuleContext(ParserGo.DeclarationContext,0)
+
 
         def labeledStmt(self):
-            return self.getTypedRuleContext(ParserGo.LabeledStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.LabeledStmtContext,0)
+
 
         def simpleStmt(self):
-            return self.getTypedRuleContext(ParserGo.SimpleStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.SimpleStmtContext,0)
+
 
         def goStmt(self):
-            return self.getTypedRuleContext(ParserGo.GoStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.GoStmtContext,0)
+
 
         def returnStmt(self):
-            return self.getTypedRuleContext(ParserGo.ReturnStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.ReturnStmtContext,0)
+
 
         def breakStmt(self):
-            return self.getTypedRuleContext(ParserGo.BreakStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.BreakStmtContext,0)
+
 
         def continueStmt(self):
-            return self.getTypedRuleContext(ParserGo.ContinueStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.ContinueStmtContext,0)
+
 
         def gotoStmt(self):
-            return self.getTypedRuleContext(ParserGo.GotoStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.GotoStmtContext,0)
+
 
         def fallthroughStmt(self):
-            return self.getTypedRuleContext(ParserGo.FallthroughStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.FallthroughStmtContext,0)
+
 
         def block(self):
-            return self.getTypedRuleContext(ParserGo.BlockContext, 0)
+            return self.getTypedRuleContext(ParserGo.BlockContext,0)
+
 
         def ifStmt(self):
-            return self.getTypedRuleContext(ParserGo.IfStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.IfStmtContext,0)
+
 
         def switchStmt(self):
-            return self.getTypedRuleContext(ParserGo.SwitchStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.SwitchStmtContext,0)
+
 
         def selectStmt(self):
-            return self.getTypedRuleContext(ParserGo.SelectStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.SelectStmtContext,0)
+
 
         def forStmt(self):
-            return self.getTypedRuleContext(ParserGo.ForStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.ForStmtContext,0)
+
 
         def deferStmt(self):
-            return self.getTypedRuleContext(ParserGo.DeferStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.DeferStmtContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_statement
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterStatement"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterStatement" ):
                 listener.enterStatement(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitStatement"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitStatement" ):
                 listener.exitStatement(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitStatement"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStatement" ):
                 return visitor.visitStatement(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def statement(self):
 
@@ -2154,7 +2251,7 @@ class ParserGo(Parser):
         try:
             self.state = 374
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 24, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,24,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 359
@@ -2254,46 +2351,56 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class SimpleStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def sendStmt(self):
-            return self.getTypedRuleContext(ParserGo.SendStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.SendStmtContext,0)
+
 
         def expressionStmt(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionStmtContext,0)
+
 
         def incDecStmt(self):
-            return self.getTypedRuleContext(ParserGo.IncDecStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.IncDecStmtContext,0)
+
 
         def assignment(self):
-            return self.getTypedRuleContext(ParserGo.AssignmentContext, 0)
+            return self.getTypedRuleContext(ParserGo.AssignmentContext,0)
+
 
         def shortVarDecl(self):
-            return self.getTypedRuleContext(ParserGo.ShortVarDeclContext, 0)
+            return self.getTypedRuleContext(ParserGo.ShortVarDeclContext,0)
+
 
         def emptyStmt(self):
-            return self.getTypedRuleContext(ParserGo.EmptyStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.EmptyStmtContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_simpleStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterSimpleStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSimpleStmt" ):
                 listener.enterSimpleStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitSimpleStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSimpleStmt" ):
                 listener.exitSimpleStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitSimpleStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSimpleStmt" ):
                 return visitor.visitSimpleStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def simpleStmt(self):
 
@@ -2302,7 +2409,7 @@ class ParserGo(Parser):
         try:
             self.state = 382
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 25, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,25,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 376
@@ -2348,31 +2455,36 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ExpressionStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def expression(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_expressionStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterExpressionStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExpressionStmt" ):
                 listener.enterExpressionStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitExpressionStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExpressionStmt" ):
                 listener.exitExpressionStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitExpressionStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExpressionStmt" ):
                 return visitor.visitExpressionStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def expressionStmt(self):
 
@@ -2390,17 +2502,19 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class SendStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def expression(self, i: int = None):
+        def expression(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.ExpressionContext)
             else:
-                return self.getTypedRuleContext(ParserGo.ExpressionContext, i)
+                return self.getTypedRuleContext(ParserGo.ExpressionContext,i)
+
 
         def RECEIVE(self):
             return self.getToken(ParserGo.RECEIVE, 0)
@@ -2408,19 +2522,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_sendStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterSendStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSendStmt" ):
                 listener.enterSendStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitSendStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSendStmt" ):
                 listener.exitSendStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitSendStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSendStmt" ):
                 return visitor.visitSendStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def sendStmt(self):
 
@@ -2442,14 +2559,16 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class IncDecStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def expression(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionContext,0)
+
 
         def PLUS_PLUS(self):
             return self.getToken(ParserGo.PLUS_PLUS, 0)
@@ -2460,32 +2579,35 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_incDecStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterIncDecStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterIncDecStmt" ):
                 listener.enterIncDecStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitIncDecStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitIncDecStmt" ):
                 listener.exitIncDecStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitIncDecStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIncDecStmt" ):
                 return visitor.visitIncDecStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def incDecStmt(self):
 
         localctx = ParserGo.IncDecStmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 46, self.RULE_incDecStmt)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 390
             self.expression(0)
             self.state = 391
-            _la = self.TokenStream.LA(1)
-            if not (_la == ParserGo.PLUS_PLUS or _la == ParserGo.MINUS_MINUS):
+            _la = self._input.LA(1)
+            if not(_la==ParserGo.PLUS_PLUS or _la==ParserGo.MINUS_MINUS):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -2498,37 +2620,43 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class AssignmentContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def expressionList(self, i: int = None):
+        def expressionList(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.ExpressionListContext)
             else:
-                return self.getTypedRuleContext(ParserGo.ExpressionListContext, i)
+                return self.getTypedRuleContext(ParserGo.ExpressionListContext,i)
+
 
         def assign_op(self):
-            return self.getTypedRuleContext(ParserGo.Assign_opContext, 0)
+            return self.getTypedRuleContext(ParserGo.Assign_opContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_assignment
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterAssignment"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAssignment" ):
                 listener.enterAssignment(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitAssignment"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAssignment" ):
                 listener.exitAssignment(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitAssignment"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAssignment" ):
                 return visitor.visitAssignment(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def assignment(self):
 
@@ -2550,9 +2678,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class Assign_opContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -2595,45 +2724,42 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_assign_op
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterAssign_op"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAssign_op" ):
                 listener.enterAssign_op(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitAssign_op"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAssign_op" ):
                 listener.exitAssign_op(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitAssign_op"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAssign_op" ):
                 return visitor.visitAssign_op(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def assign_op(self):
 
         localctx = ParserGo.Assign_opContext(self, self._ctx, self.state)
         self.enterRule(localctx, 50, self.RULE_assign_op)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 398
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                    (1 << ParserGo.OR) | (1 << ParserGo.DIV) | (1 << ParserGo.MOD) | (1 << ParserGo.LSHIFT) | (
-                    1 << ParserGo.RSHIFT) | (1 << ParserGo.BIT_CLEAR) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (
-                            1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND))) != 0):
+            _la = self._input.LA(1)
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.OR) | (1 << ParserGo.DIV) | (1 << ParserGo.MOD) | (1 << ParserGo.LSHIFT) | (1 << ParserGo.RSHIFT) | (1 << ParserGo.BIT_CLEAR) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND))) != 0):
                 self.state = 397
-                _la = self.TokenStream.LA(1)
-                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                        (1 << ParserGo.OR) | (1 << ParserGo.DIV) | (1 << ParserGo.MOD) | (1 << ParserGo.LSHIFT) | (
-                        1 << ParserGo.RSHIFT) | (1 << ParserGo.BIT_CLEAR) | (1 << ParserGo.PLUS) | (
-                                1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (
-                                1 << ParserGo.AMPERSAND))) != 0)):
+                _la = self._input.LA(1)
+                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.OR) | (1 << ParserGo.DIV) | (1 << ParserGo.MOD) | (1 << ParserGo.LSHIFT) | (1 << ParserGo.RSHIFT) | (1 << ParserGo.BIT_CLEAR) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND))) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
+
 
             self.state = 400
             self.match(ParserGo.ASSIGN)
@@ -2645,37 +2771,43 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ShortVarDeclContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def identifierList(self):
-            return self.getTypedRuleContext(ParserGo.IdentifierListContext, 0)
+            return self.getTypedRuleContext(ParserGo.IdentifierListContext,0)
+
 
         def DECLARE_ASSIGN(self):
             return self.getToken(ParserGo.DECLARE_ASSIGN, 0)
 
         def expressionList(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionListContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionListContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_shortVarDecl
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterShortVarDecl"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterShortVarDecl" ):
                 listener.enterShortVarDecl(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitShortVarDecl"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitShortVarDecl" ):
                 listener.exitShortVarDecl(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitShortVarDecl"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitShortVarDecl" ):
                 return visitor.visitShortVarDecl(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def shortVarDecl(self):
 
@@ -2697,9 +2829,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class EmptyStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -2709,19 +2842,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_emptyStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterEmptyStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterEmptyStmt" ):
                 listener.enterEmptyStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitEmptyStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitEmptyStmt" ):
                 listener.exitEmptyStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitEmptyStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEmptyStmt" ):
                 return visitor.visitEmptyStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def emptyStmt(self):
 
@@ -2739,9 +2875,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class LabeledStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -2752,24 +2889,28 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.COLON, 0)
 
         def statement(self):
-            return self.getTypedRuleContext(ParserGo.StatementContext, 0)
+            return self.getTypedRuleContext(ParserGo.StatementContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_labeledStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterLabeledStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLabeledStmt" ):
                 listener.enterLabeledStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitLabeledStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLabeledStmt" ):
                 listener.exitLabeledStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitLabeledStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLabeledStmt" ):
                 return visitor.visitLabeledStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def labeledStmt(self):
 
@@ -2791,9 +2932,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ReturnStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -2801,24 +2943,28 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.RETURN, 0)
 
         def expressionList(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionListContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionListContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_returnStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterReturnStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterReturnStmt" ):
                 listener.enterReturnStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitReturnStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitReturnStmt" ):
                 listener.exitReturnStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitReturnStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReturnStmt" ):
                 return visitor.visitReturnStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def returnStmt(self):
 
@@ -2830,7 +2976,7 @@ class ParserGo(Parser):
             self.match(ParserGo.RETURN)
             self.state = 414
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 27, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,27,self._ctx)
             if la_ == 1:
                 self.state = 413
                 self.expressionList()
@@ -2844,9 +2990,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class BreakStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -2859,19 +3006,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_breakStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterBreakStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterBreakStmt" ):
                 listener.enterBreakStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitBreakStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitBreakStmt" ):
                 listener.exitBreakStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitBreakStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBreakStmt" ):
                 return visitor.visitBreakStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def breakStmt(self):
 
@@ -2883,7 +3033,7 @@ class ParserGo(Parser):
             self.match(ParserGo.BREAK)
             self.state = 418
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 28, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,28,self._ctx)
             if la_ == 1:
                 self.state = 417
                 self.match(ParserGo.IDENTIFIER)
@@ -2897,9 +3047,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ContinueStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -2912,19 +3063,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_continueStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterContinueStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterContinueStmt" ):
                 listener.enterContinueStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitContinueStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitContinueStmt" ):
                 listener.exitContinueStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitContinueStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitContinueStmt" ):
                 return visitor.visitContinueStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def continueStmt(self):
 
@@ -2936,7 +3090,7 @@ class ParserGo(Parser):
             self.match(ParserGo.CONTINUE)
             self.state = 422
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 29, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,29,self._ctx)
             if la_ == 1:
                 self.state = 421
                 self.match(ParserGo.IDENTIFIER)
@@ -2950,9 +3104,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class GotoStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -2965,19 +3120,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_gotoStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterGotoStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterGotoStmt" ):
                 listener.enterGotoStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitGotoStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitGotoStmt" ):
                 listener.exitGotoStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitGotoStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGotoStmt" ):
                 return visitor.visitGotoStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def gotoStmt(self):
 
@@ -2997,9 +3155,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class FallthroughStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -3009,19 +3168,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_fallthroughStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterFallthroughStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFallthroughStmt" ):
                 listener.enterFallthroughStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitFallthroughStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFallthroughStmt" ):
                 listener.exitFallthroughStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitFallthroughStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFallthroughStmt" ):
                 return visitor.visitFallthroughStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def fallthroughStmt(self):
 
@@ -3039,9 +3201,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class DeferStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -3049,24 +3212,28 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.DEFER, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_deferStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterDeferStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterDeferStmt" ):
                 listener.enterDeferStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitDeferStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitDeferStmt" ):
                 listener.exitDeferStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitDeferStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeferStmt" ):
                 return visitor.visitDeferStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def deferStmt(self):
 
@@ -3086,9 +3253,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class IfStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -3096,16 +3264,19 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.IF, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionContext,0)
 
-        def block(self, i: int = None):
+
+        def block(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.BlockContext)
             else:
-                return self.getTypedRuleContext(ParserGo.BlockContext, i)
+                return self.getTypedRuleContext(ParserGo.BlockContext,i)
+
 
         def simpleStmt(self):
-            return self.getTypedRuleContext(ParserGo.SimpleStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.SimpleStmtContext,0)
+
 
         def SEMI(self):
             return self.getToken(ParserGo.SEMI, 0)
@@ -3114,24 +3285,28 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.ELSE, 0)
 
         def ifStmt(self):
-            return self.getTypedRuleContext(ParserGo.IfStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.IfStmtContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_ifStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterIfStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterIfStmt" ):
                 listener.enterIfStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitIfStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitIfStmt" ):
                 listener.exitIfStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitIfStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIfStmt" ):
                 return visitor.visitIfStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def ifStmt(self):
 
@@ -3143,12 +3318,13 @@ class ParserGo(Parser):
             self.match(ParserGo.IF)
             self.state = 436
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 30, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,30,self._ctx)
             if la_ == 1:
                 self.state = 433
                 self.simpleStmt()
                 self.state = 434
                 self.match(ParserGo.SEMI)
+
 
             self.state = 438
             self.expression(0)
@@ -3156,13 +3332,13 @@ class ParserGo(Parser):
             self.block()
             self.state = 445
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 32, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,32,self._ctx)
             if la_ == 1:
                 self.state = 440
                 self.match(ParserGo.ELSE)
                 self.state = 443
                 self._errHandler.sync(self)
-                token = self.TokenStream.LA(1)
+                token = self._input.LA(1)
                 if token in [ParserGo.IF]:
                     self.state = 441
                     self.ifStmt()
@@ -3184,34 +3360,40 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class SwitchStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def exprSwitchStmt(self):
-            return self.getTypedRuleContext(ParserGo.ExprSwitchStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExprSwitchStmtContext,0)
+
 
         def typeSwitchStmt(self):
-            return self.getTypedRuleContext(ParserGo.TypeSwitchStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.TypeSwitchStmtContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_switchStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterSwitchStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSwitchStmt" ):
                 listener.enterSwitchStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitSwitchStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSwitchStmt" ):
                 listener.exitSwitchStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitSwitchStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSwitchStmt" ):
                 return visitor.visitSwitchStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def switchStmt(self):
 
@@ -3220,7 +3402,7 @@ class ParserGo(Parser):
         try:
             self.state = 449
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 33, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,33,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 447
@@ -3242,9 +3424,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ExprSwitchStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -3258,84 +3441,81 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.R_CURLY, 0)
 
         def simpleStmt(self):
-            return self.getTypedRuleContext(ParserGo.SimpleStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.SimpleStmtContext,0)
+
 
         def SEMI(self):
             return self.getToken(ParserGo.SEMI, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionContext,0)
 
-        def exprCaseClause(self, i: int = None):
+
+        def exprCaseClause(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.ExprCaseClauseContext)
             else:
-                return self.getTypedRuleContext(ParserGo.ExprCaseClauseContext, i)
+                return self.getTypedRuleContext(ParserGo.ExprCaseClauseContext,i)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_exprSwitchStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterExprSwitchStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExprSwitchStmt" ):
                 listener.enterExprSwitchStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitExprSwitchStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExprSwitchStmt" ):
                 listener.exitExprSwitchStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitExprSwitchStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExprSwitchStmt" ):
                 return visitor.visitExprSwitchStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def exprSwitchStmt(self):
 
         localctx = ParserGo.ExprSwitchStmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 74, self.RULE_exprSwitchStmt)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 451
             self.match(ParserGo.SWITCH)
             self.state = 455
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 34, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,34,self._ctx)
             if la_ == 1:
                 self.state = 452
                 self.simpleStmt()
                 self.state = 453
                 self.match(ParserGo.SEMI)
 
+
             self.state = 458
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                    (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (
-                    1 << ParserGo.CHAN) | (1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (
-                            1 << ParserGo.L_PAREN) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.EXCLAMATION) | (
-                            1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (
-                            1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (1 << ParserGo.RECEIVE))) != 0) or (
-                    (((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & (
-                    (1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (
-                    1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (
-                            1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (
-                            1 << (ParserGo.RAW_STRING_LIT - 64)) | (
-                            1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
+            _la = self._input.LA(1)
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (1 << (ParserGo.RAW_STRING_LIT - 64)) | (1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
                 self.state = 457
                 self.expression(0)
+
 
             self.state = 460
             self.match(ParserGo.L_CURLY)
             self.state = 464
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            while _la == ParserGo.DEFAULT or _la == ParserGo.CASE:
+            _la = self._input.LA(1)
+            while _la==ParserGo.DEFAULT or _la==ParserGo.CASE:
                 self.state = 461
                 self.exprCaseClause()
                 self.state = 466
                 self._errHandler.sync(self)
-                _la = self.TokenStream.LA(1)
+                _la = self._input.LA(1)
 
             self.state = 467
             self.match(ParserGo.R_CURLY)
@@ -3347,43 +3527,49 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ExprCaseClauseContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def exprSwitchCase(self):
-            return self.getTypedRuleContext(ParserGo.ExprSwitchCaseContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExprSwitchCaseContext,0)
+
 
         def COLON(self):
             return self.getToken(ParserGo.COLON, 0)
 
         def statementList(self):
-            return self.getTypedRuleContext(ParserGo.StatementListContext, 0)
+            return self.getTypedRuleContext(ParserGo.StatementListContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_exprCaseClause
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterExprCaseClause"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExprCaseClause" ):
                 listener.enterExprCaseClause(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitExprCaseClause"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExprCaseClause" ):
                 listener.exitExprCaseClause(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitExprCaseClause"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExprCaseClause" ):
                 return visitor.visitExprCaseClause(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def exprCaseClause(self):
 
         localctx = ParserGo.ExprCaseClauseContext(self, self._ctx, self.state)
         self.enterRule(localctx, 76, self.RULE_exprCaseClause)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 469
@@ -3392,24 +3578,8 @@ class ParserGo(Parser):
             self.match(ParserGo.COLON)
             self.state = 472
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                    (1 << ParserGo.BREAK) | (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (
-                    1 << ParserGo.SELECT) | (1 << ParserGo.DEFER) | (1 << ParserGo.GO) | (1 << ParserGo.MAP) | (
-                            1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.GOTO) | (
-                            1 << ParserGo.SWITCH) | (1 << ParserGo.CONST) | (1 << ParserGo.FALLTHROUGH) | (
-                            1 << ParserGo.IF) | (1 << ParserGo.TYPE) | (1 << ParserGo.CONTINUE) | (
-                            1 << ParserGo.FOR) | (1 << ParserGo.RETURN) | (1 << ParserGo.VAR) | (
-                            1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (
-                            1 << ParserGo.L_CURLY) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.SEMI) | (
-                            1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (
-                            1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (
-                            1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & (
-                    (1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (
-                    1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (
-                            1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (
-                            1 << (ParserGo.RAW_STRING_LIT - 64)) | (
-                            1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
+            _la = self._input.LA(1)
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.BREAK) | (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.SELECT) | (1 << ParserGo.DEFER) | (1 << ParserGo.GO) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.GOTO) | (1 << ParserGo.SWITCH) | (1 << ParserGo.CONST) | (1 << ParserGo.FALLTHROUGH) | (1 << ParserGo.IF) | (1 << ParserGo.TYPE) | (1 << ParserGo.CONTINUE) | (1 << ParserGo.FOR) | (1 << ParserGo.RETURN) | (1 << ParserGo.VAR) | (1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (1 << ParserGo.L_CURLY) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.SEMI) | (1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (1 << (ParserGo.RAW_STRING_LIT - 64)) | (1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
                 self.state = 471
                 self.statementList()
 
@@ -3422,9 +3592,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ExprSwitchCaseContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -3432,7 +3603,8 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.CASE, 0)
 
         def expressionList(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionListContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionListContext,0)
+
 
         def DEFAULT(self):
             return self.getToken(ParserGo.DEFAULT, 0)
@@ -3440,19 +3612,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_exprSwitchCase
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterExprSwitchCase"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExprSwitchCase" ):
                 listener.enterExprSwitchCase(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitExprSwitchCase"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExprSwitchCase" ):
                 listener.exitExprSwitchCase(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitExprSwitchCase"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExprSwitchCase" ):
                 return visitor.visitExprSwitchCase(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def exprSwitchCase(self):
 
@@ -3461,7 +3636,7 @@ class ParserGo(Parser):
         try:
             self.state = 477
             self._errHandler.sync(self)
-            token = self.TokenStream.LA(1)
+            token = self._input.LA(1)
             if token in [ParserGo.CASE]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 474
@@ -3485,9 +3660,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class TypeSwitchStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -3495,7 +3671,8 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.SWITCH, 0)
 
         def typeSwitchGuard(self):
-            return self.getTypedRuleContext(ParserGo.TypeSwitchGuardContext, 0)
+            return self.getTypedRuleContext(ParserGo.TypeSwitchGuardContext,0)
+
 
         def L_CURLY(self):
             return self.getToken(ParserGo.L_CURLY, 0)
@@ -3504,51 +3681,57 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.R_CURLY, 0)
 
         def simpleStmt(self):
-            return self.getTypedRuleContext(ParserGo.SimpleStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.SimpleStmtContext,0)
+
 
         def SEMI(self):
             return self.getToken(ParserGo.SEMI, 0)
 
-        def typeCaseClause(self, i: int = None):
+        def typeCaseClause(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.TypeCaseClauseContext)
             else:
-                return self.getTypedRuleContext(ParserGo.TypeCaseClauseContext, i)
+                return self.getTypedRuleContext(ParserGo.TypeCaseClauseContext,i)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_typeSwitchStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterTypeSwitchStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTypeSwitchStmt" ):
                 listener.enterTypeSwitchStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitTypeSwitchStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTypeSwitchStmt" ):
                 listener.exitTypeSwitchStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeSwitchStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeSwitchStmt" ):
                 return visitor.visitTypeSwitchStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def typeSwitchStmt(self):
 
         localctx = ParserGo.TypeSwitchStmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 80, self.RULE_typeSwitchStmt)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 479
             self.match(ParserGo.SWITCH)
             self.state = 483
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 39, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,39,self._ctx)
             if la_ == 1:
                 self.state = 480
                 self.simpleStmt()
                 self.state = 481
                 self.match(ParserGo.SEMI)
+
 
             self.state = 485
             self.typeSwitchGuard()
@@ -3556,13 +3739,13 @@ class ParserGo(Parser):
             self.match(ParserGo.L_CURLY)
             self.state = 490
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            while _la == ParserGo.DEFAULT or _la == ParserGo.CASE:
+            _la = self._input.LA(1)
+            while _la==ParserGo.DEFAULT or _la==ParserGo.CASE:
                 self.state = 487
                 self.typeCaseClause()
                 self.state = 492
                 self._errHandler.sync(self)
-                _la = self.TokenStream.LA(1)
+                _la = self._input.LA(1)
 
             self.state = 493
             self.match(ParserGo.R_CURLY)
@@ -3574,14 +3757,16 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class TypeSwitchGuardContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def primaryExpr(self):
-            return self.getTypedRuleContext(ParserGo.PrimaryExprContext, 0)
+            return self.getTypedRuleContext(ParserGo.PrimaryExprContext,0)
+
 
         def DOT(self):
             return self.getToken(ParserGo.DOT, 0)
@@ -3604,19 +3789,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_typeSwitchGuard
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterTypeSwitchGuard"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTypeSwitchGuard" ):
                 listener.enterTypeSwitchGuard(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitTypeSwitchGuard"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTypeSwitchGuard" ):
                 listener.exitTypeSwitchGuard(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeSwitchGuard"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeSwitchGuard" ):
                 return visitor.visitTypeSwitchGuard(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def typeSwitchGuard(self):
 
@@ -3626,12 +3814,13 @@ class ParserGo(Parser):
             self.enterOuterAlt(localctx, 1)
             self.state = 497
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 41, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,41,self._ctx)
             if la_ == 1:
                 self.state = 495
                 self.match(ParserGo.IDENTIFIER)
                 self.state = 496
                 self.match(ParserGo.DECLARE_ASSIGN)
+
 
             self.state = 499
             self.primaryExpr(0)
@@ -3651,43 +3840,49 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class TypeCaseClauseContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def typeSwitchCase(self):
-            return self.getTypedRuleContext(ParserGo.TypeSwitchCaseContext, 0)
+            return self.getTypedRuleContext(ParserGo.TypeSwitchCaseContext,0)
+
 
         def COLON(self):
             return self.getToken(ParserGo.COLON, 0)
 
         def statementList(self):
-            return self.getTypedRuleContext(ParserGo.StatementListContext, 0)
+            return self.getTypedRuleContext(ParserGo.StatementListContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_typeCaseClause
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterTypeCaseClause"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTypeCaseClause" ):
                 listener.enterTypeCaseClause(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitTypeCaseClause"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTypeCaseClause" ):
                 listener.exitTypeCaseClause(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeCaseClause"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeCaseClause" ):
                 return visitor.visitTypeCaseClause(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def typeCaseClause(self):
 
         localctx = ParserGo.TypeCaseClauseContext(self, self._ctx, self.state)
         self.enterRule(localctx, 84, self.RULE_typeCaseClause)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 505
@@ -3696,24 +3891,8 @@ class ParserGo(Parser):
             self.match(ParserGo.COLON)
             self.state = 508
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                    (1 << ParserGo.BREAK) | (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (
-                    1 << ParserGo.SELECT) | (1 << ParserGo.DEFER) | (1 << ParserGo.GO) | (1 << ParserGo.MAP) | (
-                            1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.GOTO) | (
-                            1 << ParserGo.SWITCH) | (1 << ParserGo.CONST) | (1 << ParserGo.FALLTHROUGH) | (
-                            1 << ParserGo.IF) | (1 << ParserGo.TYPE) | (1 << ParserGo.CONTINUE) | (
-                            1 << ParserGo.FOR) | (1 << ParserGo.RETURN) | (1 << ParserGo.VAR) | (
-                            1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (
-                            1 << ParserGo.L_CURLY) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.SEMI) | (
-                            1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (
-                            1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (
-                            1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & (
-                    (1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (
-                    1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (
-                            1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (
-                            1 << (ParserGo.RAW_STRING_LIT - 64)) | (
-                            1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
+            _la = self._input.LA(1)
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.BREAK) | (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.SELECT) | (1 << ParserGo.DEFER) | (1 << ParserGo.GO) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.GOTO) | (1 << ParserGo.SWITCH) | (1 << ParserGo.CONST) | (1 << ParserGo.FALLTHROUGH) | (1 << ParserGo.IF) | (1 << ParserGo.TYPE) | (1 << ParserGo.CONTINUE) | (1 << ParserGo.FOR) | (1 << ParserGo.RETURN) | (1 << ParserGo.VAR) | (1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (1 << ParserGo.L_CURLY) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.SEMI) | (1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (1 << (ParserGo.RAW_STRING_LIT - 64)) | (1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
                 self.state = 507
                 self.statementList()
 
@@ -3726,9 +3905,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class TypeSwitchCaseContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -3736,7 +3916,8 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.CASE, 0)
 
         def typeList(self):
-            return self.getTypedRuleContext(ParserGo.TypeListContext, 0)
+            return self.getTypedRuleContext(ParserGo.TypeListContext,0)
+
 
         def DEFAULT(self):
             return self.getToken(ParserGo.DEFAULT, 0)
@@ -3744,19 +3925,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_typeSwitchCase
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterTypeSwitchCase"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTypeSwitchCase" ):
                 listener.enterTypeSwitchCase(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitTypeSwitchCase"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTypeSwitchCase" ):
                 listener.exitTypeSwitchCase(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeSwitchCase"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeSwitchCase" ):
                 return visitor.visitTypeSwitchCase(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def typeSwitchCase(self):
 
@@ -3765,7 +3949,7 @@ class ParserGo(Parser):
         try:
             self.state = 513
             self._errHandler.sync(self)
-            token = self.TokenStream.LA(1)
+            token = self._input.LA(1)
             if token in [ParserGo.CASE]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 510
@@ -3789,25 +3973,27 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class TypeListContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def type_(self, i: int = None):
+        def type_(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.Type_Context)
             else:
-                return self.getTypedRuleContext(ParserGo.Type_Context, i)
+                return self.getTypedRuleContext(ParserGo.Type_Context,i)
 
-        def NIL_LIT(self, i: int = None):
+
+        def NIL_LIT(self, i:int=None):
             if i is None:
                 return self.getTokens(ParserGo.NIL_LIT)
             else:
                 return self.getToken(ParserGo.NIL_LIT, i)
 
-        def COMMA(self, i: int = None):
+        def COMMA(self, i:int=None):
             if i is None:
                 return self.getTokens(ParserGo.COMMA)
             else:
@@ -3816,32 +4002,34 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_typeList
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterTypeList"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTypeList" ):
                 listener.enterTypeList(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitTypeList"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTypeList" ):
                 listener.exitTypeList(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeList"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeList" ):
                 return visitor.visitTypeList(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def typeList(self):
 
         localctx = ParserGo.TypeListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 88, self.RULE_typeList)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 517
             self._errHandler.sync(self)
-            token = self.TokenStream.LA(1)
-            if token in [ParserGo.FUNC, ParserGo.INTERFACE, ParserGo.MAP, ParserGo.STRUCT, ParserGo.CHAN,
-                         ParserGo.IDENTIFIER, ParserGo.L_PAREN, ParserGo.L_BRACKET, ParserGo.STAR, ParserGo.RECEIVE]:
+            token = self._input.LA(1)
+            if token in [ParserGo.FUNC, ParserGo.INTERFACE, ParserGo.MAP, ParserGo.STRUCT, ParserGo.CHAN, ParserGo.IDENTIFIER, ParserGo.L_PAREN, ParserGo.L_BRACKET, ParserGo.STAR, ParserGo.RECEIVE]:
                 self.state = 515
                 self.type_()
                 pass
@@ -3854,16 +4042,14 @@ class ParserGo(Parser):
 
             self.state = 526
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            while _la == ParserGo.COMMA:
+            _la = self._input.LA(1)
+            while _la==ParserGo.COMMA:
                 self.state = 519
                 self.match(ParserGo.COMMA)
                 self.state = 522
                 self._errHandler.sync(self)
-                token = self.TokenStream.LA(1)
-                if token in [ParserGo.FUNC, ParserGo.INTERFACE, ParserGo.MAP, ParserGo.STRUCT, ParserGo.CHAN,
-                             ParserGo.IDENTIFIER, ParserGo.L_PAREN, ParserGo.L_BRACKET, ParserGo.STAR,
-                             ParserGo.RECEIVE]:
+                token = self._input.LA(1)
+                if token in [ParserGo.FUNC, ParserGo.INTERFACE, ParserGo.MAP, ParserGo.STRUCT, ParserGo.CHAN, ParserGo.IDENTIFIER, ParserGo.L_PAREN, ParserGo.L_BRACKET, ParserGo.STAR, ParserGo.RECEIVE]:
                     self.state = 520
                     self.type_()
                     pass
@@ -3876,7 +4062,7 @@ class ParserGo(Parser):
 
                 self.state = 528
                 self._errHandler.sync(self)
-                _la = self.TokenStream.LA(1)
+                _la = self._input.LA(1)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -3886,9 +4072,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class SelectStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -3901,34 +4088,38 @@ class ParserGo(Parser):
         def R_CURLY(self):
             return self.getToken(ParserGo.R_CURLY, 0)
 
-        def commClause(self, i: int = None):
+        def commClause(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.CommClauseContext)
             else:
-                return self.getTypedRuleContext(ParserGo.CommClauseContext, i)
+                return self.getTypedRuleContext(ParserGo.CommClauseContext,i)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_selectStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterSelectStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSelectStmt" ):
                 listener.enterSelectStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitSelectStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSelectStmt" ):
                 listener.exitSelectStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitSelectStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSelectStmt" ):
                 return visitor.visitSelectStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def selectStmt(self):
 
         localctx = ParserGo.SelectStmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 90, self.RULE_selectStmt)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 529
@@ -3937,13 +4128,13 @@ class ParserGo(Parser):
             self.match(ParserGo.L_CURLY)
             self.state = 534
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            while _la == ParserGo.DEFAULT or _la == ParserGo.CASE:
+            _la = self._input.LA(1)
+            while _la==ParserGo.DEFAULT or _la==ParserGo.CASE:
                 self.state = 531
                 self.commClause()
                 self.state = 536
                 self._errHandler.sync(self)
-                _la = self.TokenStream.LA(1)
+                _la = self._input.LA(1)
 
             self.state = 537
             self.match(ParserGo.R_CURLY)
@@ -3955,43 +4146,49 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class CommClauseContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def commCase(self):
-            return self.getTypedRuleContext(ParserGo.CommCaseContext, 0)
+            return self.getTypedRuleContext(ParserGo.CommCaseContext,0)
+
 
         def COLON(self):
             return self.getToken(ParserGo.COLON, 0)
 
         def statementList(self):
-            return self.getTypedRuleContext(ParserGo.StatementListContext, 0)
+            return self.getTypedRuleContext(ParserGo.StatementListContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_commClause
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterCommClause"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterCommClause" ):
                 listener.enterCommClause(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitCommClause"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitCommClause" ):
                 listener.exitCommClause(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitCommClause"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCommClause" ):
                 return visitor.visitCommClause(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def commClause(self):
 
         localctx = ParserGo.CommClauseContext(self, self._ctx, self.state)
         self.enterRule(localctx, 92, self.RULE_commClause)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 539
@@ -4000,24 +4197,8 @@ class ParserGo(Parser):
             self.match(ParserGo.COLON)
             self.state = 542
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                    (1 << ParserGo.BREAK) | (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (
-                    1 << ParserGo.SELECT) | (1 << ParserGo.DEFER) | (1 << ParserGo.GO) | (1 << ParserGo.MAP) | (
-                            1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.GOTO) | (
-                            1 << ParserGo.SWITCH) | (1 << ParserGo.CONST) | (1 << ParserGo.FALLTHROUGH) | (
-                            1 << ParserGo.IF) | (1 << ParserGo.TYPE) | (1 << ParserGo.CONTINUE) | (
-                            1 << ParserGo.FOR) | (1 << ParserGo.RETURN) | (1 << ParserGo.VAR) | (
-                            1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (
-                            1 << ParserGo.L_CURLY) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.SEMI) | (
-                            1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (
-                            1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (
-                            1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & (
-                    (1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (
-                    1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (
-                            1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (
-                            1 << (ParserGo.RAW_STRING_LIT - 64)) | (
-                            1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
+            _la = self._input.LA(1)
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.BREAK) | (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.SELECT) | (1 << ParserGo.DEFER) | (1 << ParserGo.GO) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.GOTO) | (1 << ParserGo.SWITCH) | (1 << ParserGo.CONST) | (1 << ParserGo.FALLTHROUGH) | (1 << ParserGo.IF) | (1 << ParserGo.TYPE) | (1 << ParserGo.CONTINUE) | (1 << ParserGo.FOR) | (1 << ParserGo.RETURN) | (1 << ParserGo.VAR) | (1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (1 << ParserGo.L_CURLY) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.SEMI) | (1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (1 << (ParserGo.RAW_STRING_LIT - 64)) | (1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
                 self.state = 541
                 self.statementList()
 
@@ -4030,9 +4211,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class CommCaseContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -4040,10 +4222,12 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.CASE, 0)
 
         def sendStmt(self):
-            return self.getTypedRuleContext(ParserGo.SendStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.SendStmtContext,0)
+
 
         def recvStmt(self):
-            return self.getTypedRuleContext(ParserGo.RecvStmtContext, 0)
+            return self.getTypedRuleContext(ParserGo.RecvStmtContext,0)
+
 
         def DEFAULT(self):
             return self.getToken(ParserGo.DEFAULT, 0)
@@ -4051,19 +4235,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_commCase
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterCommCase"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterCommCase" ):
                 listener.enterCommCase(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitCommCase"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitCommCase" ):
                 listener.exitCommCase(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitCommCase"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCommCase" ):
                 return visitor.visitCommCase(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def commCase(self):
 
@@ -4072,14 +4259,14 @@ class ParserGo(Parser):
         try:
             self.state = 550
             self._errHandler.sync(self)
-            token = self.TokenStream.LA(1)
+            token = self._input.LA(1)
             if token in [ParserGo.CASE]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 544
                 self.match(ParserGo.CASE)
                 self.state = 547
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self.TokenStream, 49, self._ctx)
+                la_ = self._interp.adaptivePredict(self._input,49,self._ctx)
                 if la_ == 1:
                     self.state = 545
                     self.sendStmt()
@@ -4089,6 +4276,7 @@ class ParserGo(Parser):
                     self.state = 546
                     self.recvStmt()
                     pass
+
 
                 pass
             elif token in [ParserGo.DEFAULT]:
@@ -4107,23 +4295,27 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class RecvStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def expression(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionContext,0)
+
 
         def expressionList(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionListContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionListContext,0)
+
 
         def ASSIGN(self):
             return self.getToken(ParserGo.ASSIGN, 0)
 
         def identifierList(self):
-            return self.getTypedRuleContext(ParserGo.IdentifierListContext, 0)
+            return self.getTypedRuleContext(ParserGo.IdentifierListContext,0)
+
 
         def DECLARE_ASSIGN(self):
             return self.getToken(ParserGo.DECLARE_ASSIGN, 0)
@@ -4131,19 +4323,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_recvStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterRecvStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterRecvStmt" ):
                 listener.enterRecvStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitRecvStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitRecvStmt" ):
                 listener.exitRecvStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitRecvStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRecvStmt" ):
                 return visitor.visitRecvStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def recvStmt(self):
 
@@ -4153,7 +4348,7 @@ class ParserGo(Parser):
             self.enterOuterAlt(localctx, 1)
             self.state = 558
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 51, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,51,self._ctx)
             if la_ == 1:
                 self.state = 552
                 self.expressionList()
@@ -4166,6 +4361,7 @@ class ParserGo(Parser):
                 self.state = 556
                 self.match(ParserGo.DECLARE_ASSIGN)
 
+
             self.state = 560
             self.expression(0)
         except RecognitionException as re:
@@ -4176,9 +4372,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ForStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -4186,33 +4383,40 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.FOR, 0)
 
         def block(self):
-            return self.getTypedRuleContext(ParserGo.BlockContext, 0)
+            return self.getTypedRuleContext(ParserGo.BlockContext,0)
+
 
         def expression(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionContext,0)
+
 
         def forClause(self):
-            return self.getTypedRuleContext(ParserGo.ForClauseContext, 0)
+            return self.getTypedRuleContext(ParserGo.ForClauseContext,0)
+
 
         def rangeClause(self):
-            return self.getTypedRuleContext(ParserGo.RangeClauseContext, 0)
+            return self.getTypedRuleContext(ParserGo.RangeClauseContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_forStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterForStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterForStmt" ):
                 listener.enterForStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitForStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitForStmt" ):
                 listener.exitForStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitForStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitForStmt" ):
                 return visitor.visitForStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def forStmt(self):
 
@@ -4224,7 +4428,7 @@ class ParserGo(Parser):
             self.match(ParserGo.FOR)
             self.state = 566
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 52, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,52,self._ctx)
             if la_ == 1:
                 self.state = 563
                 self.expression(0)
@@ -4237,6 +4441,7 @@ class ParserGo(Parser):
                 self.state = 565
                 self.rangeClause()
 
+
             self.state = 568
             self.block()
         except RecognitionException as re:
@@ -4247,95 +4452,81 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ForClauseContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def SEMI(self, i: int = None):
+        def SEMI(self, i:int=None):
             if i is None:
                 return self.getTokens(ParserGo.SEMI)
             else:
                 return self.getToken(ParserGo.SEMI, i)
 
-        def simpleStmt(self, i: int = None):
+        def simpleStmt(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.SimpleStmtContext)
             else:
-                return self.getTypedRuleContext(ParserGo.SimpleStmtContext, i)
+                return self.getTypedRuleContext(ParserGo.SimpleStmtContext,i)
+
 
         def expression(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_forClause
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterForClause"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterForClause" ):
                 listener.enterForClause(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitForClause"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitForClause" ):
                 listener.exitForClause(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitForClause"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitForClause" ):
                 return visitor.visitForClause(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def forClause(self):
 
         localctx = ParserGo.ForClauseContext(self, self._ctx, self.state)
         self.enterRule(localctx, 100, self.RULE_forClause)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 571
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 53, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,53,self._ctx)
             if la_ == 1:
                 self.state = 570
                 self.simpleStmt()
+
 
             self.state = 573
             self.match(ParserGo.SEMI)
             self.state = 575
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                    (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (
-                    1 << ParserGo.CHAN) | (1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (
-                            1 << ParserGo.L_PAREN) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.EXCLAMATION) | (
-                            1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (
-                            1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (1 << ParserGo.RECEIVE))) != 0) or (
-                    (((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & (
-                    (1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (
-                    1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (
-                            1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (
-                            1 << (ParserGo.RAW_STRING_LIT - 64)) | (
-                            1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
+            _la = self._input.LA(1)
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (1 << (ParserGo.RAW_STRING_LIT - 64)) | (1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
                 self.state = 574
                 self.expression(0)
+
 
             self.state = 577
             self.match(ParserGo.SEMI)
             self.state = 579
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                    (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (
-                    1 << ParserGo.CHAN) | (1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (
-                            1 << ParserGo.L_PAREN) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.SEMI) | (
-                            1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (
-                            1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (
-                            1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & (
-                    (1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (
-                    1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (
-                            1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (
-                            1 << (ParserGo.RAW_STRING_LIT - 64)) | (
-                            1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
+            _la = self._input.LA(1)
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.SEMI) | (1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (1 << (ParserGo.RAW_STRING_LIT - 64)) | (1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
                 self.state = 578
                 self.simpleStmt()
 
@@ -4348,9 +4539,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class RangeClauseContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -4358,16 +4550,19 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.RANGE, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionContext,0)
+
 
         def expressionList(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionListContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionListContext,0)
+
 
         def ASSIGN(self):
             return self.getToken(ParserGo.ASSIGN, 0)
 
         def identifierList(self):
-            return self.getTypedRuleContext(ParserGo.IdentifierListContext, 0)
+            return self.getTypedRuleContext(ParserGo.IdentifierListContext,0)
+
 
         def DECLARE_ASSIGN(self):
             return self.getToken(ParserGo.DECLARE_ASSIGN, 0)
@@ -4375,19 +4570,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_rangeClause
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterRangeClause"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterRangeClause" ):
                 listener.enterRangeClause(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitRangeClause"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitRangeClause" ):
                 listener.exitRangeClause(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitRangeClause"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRangeClause" ):
                 return visitor.visitRangeClause(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def rangeClause(self):
 
@@ -4397,7 +4595,7 @@ class ParserGo(Parser):
             self.enterOuterAlt(localctx, 1)
             self.state = 587
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 56, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,56,self._ctx)
             if la_ == 1:
                 self.state = 581
                 self.expressionList()
@@ -4409,6 +4607,7 @@ class ParserGo(Parser):
                 self.identifierList()
                 self.state = 585
                 self.match(ParserGo.DECLARE_ASSIGN)
+
 
             self.state = 589
             self.match(ParserGo.RANGE)
@@ -4422,9 +4621,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class GoStmtContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -4432,24 +4632,28 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.GO, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_goStmt
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterGoStmt"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterGoStmt" ):
                 listener.enterGoStmt(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitGoStmt"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitGoStmt" ):
                 listener.exitGoStmt(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitGoStmt"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGoStmt" ):
                 return visitor.visitGoStmt(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def goStmt(self):
 
@@ -4469,23 +4673,27 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class Type_Context(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def typeName(self):
-            return self.getTypedRuleContext(ParserGo.TypeNameContext, 0)
+            return self.getTypedRuleContext(ParserGo.TypeNameContext,0)
+
 
         def typeLit(self):
-            return self.getTypedRuleContext(ParserGo.TypeLitContext, 0)
+            return self.getTypedRuleContext(ParserGo.TypeLitContext,0)
+
 
         def L_PAREN(self):
             return self.getToken(ParserGo.L_PAREN, 0)
 
         def type_(self):
-            return self.getTypedRuleContext(ParserGo.Type_Context, 0)
+            return self.getTypedRuleContext(ParserGo.Type_Context,0)
+
 
         def R_PAREN(self):
             return self.getToken(ParserGo.R_PAREN, 0)
@@ -4493,19 +4701,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_type_
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterType_"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterType_" ):
                 listener.enterType_(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitType_"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitType_" ):
                 listener.exitType_(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitType_"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitType_" ):
                 return visitor.visitType_(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def type_(self):
 
@@ -4514,14 +4725,13 @@ class ParserGo(Parser):
         try:
             self.state = 601
             self._errHandler.sync(self)
-            token = self.TokenStream.LA(1)
+            token = self._input.LA(1)
             if token in [ParserGo.IDENTIFIER]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 595
                 self.typeName()
                 pass
-            elif token in [ParserGo.FUNC, ParserGo.INTERFACE, ParserGo.MAP, ParserGo.STRUCT, ParserGo.CHAN,
-                           ParserGo.L_BRACKET, ParserGo.STAR, ParserGo.RECEIVE]:
+            elif token in [ParserGo.FUNC, ParserGo.INTERFACE, ParserGo.MAP, ParserGo.STRUCT, ParserGo.CHAN, ParserGo.L_BRACKET, ParserGo.STAR, ParserGo.RECEIVE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 596
                 self.typeLit()
@@ -4546,9 +4756,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class TypeNameContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -4556,24 +4767,28 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.IDENTIFIER, 0)
 
         def qualifiedIdent(self):
-            return self.getTypedRuleContext(ParserGo.QualifiedIdentContext, 0)
+            return self.getTypedRuleContext(ParserGo.QualifiedIdentContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_typeName
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterTypeName"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTypeName" ):
                 listener.enterTypeName(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitTypeName"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTypeName" ):
                 listener.exitTypeName(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeName"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeName" ):
                 return visitor.visitTypeName(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def typeName(self):
 
@@ -4582,7 +4797,7 @@ class ParserGo(Parser):
         try:
             self.state = 605
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 58, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,58,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 603
@@ -4604,52 +4819,64 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class TypeLitContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def arrayType(self):
-            return self.getTypedRuleContext(ParserGo.ArrayTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.ArrayTypeContext,0)
+
 
         def structType(self):
-            return self.getTypedRuleContext(ParserGo.StructTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.StructTypeContext,0)
+
 
         def pointerType(self):
-            return self.getTypedRuleContext(ParserGo.PointerTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.PointerTypeContext,0)
+
 
         def functionType(self):
-            return self.getTypedRuleContext(ParserGo.FunctionTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.FunctionTypeContext,0)
+
 
         def interfaceType(self):
-            return self.getTypedRuleContext(ParserGo.InterfaceTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.InterfaceTypeContext,0)
+
 
         def r_sliceType(self):
-            return self.getTypedRuleContext(ParserGo.R_sliceTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.R_sliceTypeContext,0)
+
 
         def mapType(self):
-            return self.getTypedRuleContext(ParserGo.MapTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.MapTypeContext,0)
+
 
         def channelType(self):
-            return self.getTypedRuleContext(ParserGo.ChannelTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.ChannelTypeContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_typeLit
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterTypeLit"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTypeLit" ):
                 listener.enterTypeLit(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitTypeLit"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTypeLit" ):
                 listener.exitTypeLit(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeLit"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeLit" ):
                 return visitor.visitTypeLit(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def typeLit(self):
 
@@ -4658,7 +4885,7 @@ class ParserGo(Parser):
         try:
             self.state = 615
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 59, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,59,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 607
@@ -4716,9 +4943,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ArrayTypeContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -4726,30 +4954,35 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.L_BRACKET, 0)
 
         def arrayLength(self):
-            return self.getTypedRuleContext(ParserGo.ArrayLengthContext, 0)
+            return self.getTypedRuleContext(ParserGo.ArrayLengthContext,0)
+
 
         def R_BRACKET(self):
             return self.getToken(ParserGo.R_BRACKET, 0)
 
         def elementType(self):
-            return self.getTypedRuleContext(ParserGo.ElementTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.ElementTypeContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_arrayType
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterArrayType"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterArrayType" ):
                 listener.enterArrayType(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitArrayType"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitArrayType" ):
                 listener.exitArrayType(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitArrayType"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArrayType" ):
                 return visitor.visitArrayType(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def arrayType(self):
 
@@ -4773,31 +5006,36 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ArrayLengthContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def expression(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_arrayLength
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterArrayLength"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterArrayLength" ):
                 listener.enterArrayLength(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitArrayLength"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitArrayLength" ):
                 listener.exitArrayLength(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitArrayLength"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArrayLength" ):
                 return visitor.visitArrayLength(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def arrayLength(self):
 
@@ -4815,31 +5053,36 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ElementTypeContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def type_(self):
-            return self.getTypedRuleContext(ParserGo.Type_Context, 0)
+            return self.getTypedRuleContext(ParserGo.Type_Context,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_elementType
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterElementType"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterElementType" ):
                 listener.enterElementType(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitElementType"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitElementType" ):
                 listener.exitElementType(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitElementType"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitElementType" ):
                 return visitor.visitElementType(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def elementType(self):
 
@@ -4857,9 +5100,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class PointerTypeContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -4867,24 +5111,28 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.STAR, 0)
 
         def type_(self):
-            return self.getTypedRuleContext(ParserGo.Type_Context, 0)
+            return self.getTypedRuleContext(ParserGo.Type_Context,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_pointerType
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterPointerType"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPointerType" ):
                 listener.enterPointerType(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitPointerType"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPointerType" ):
                 listener.exitPointerType(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitPointerType"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPointerType" ):
                 return visitor.visitPointerType(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def pointerType(self):
 
@@ -4904,9 +5152,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class InterfaceTypeContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -4919,34 +5168,39 @@ class ParserGo(Parser):
         def R_CURLY(self):
             return self.getToken(ParserGo.R_CURLY, 0)
 
-        def methodSpec(self, i: int = None):
+        def methodSpec(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.MethodSpecContext)
             else:
-                return self.getTypedRuleContext(ParserGo.MethodSpecContext, i)
+                return self.getTypedRuleContext(ParserGo.MethodSpecContext,i)
 
-        def eos(self, i: int = None):
+
+        def eos(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.EosContext)
             else:
-                return self.getTypedRuleContext(ParserGo.EosContext, i)
+                return self.getTypedRuleContext(ParserGo.EosContext,i)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_interfaceType
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterInterfaceType"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterInterfaceType" ):
                 listener.enterInterfaceType(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitInterfaceType"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitInterfaceType" ):
                 listener.exitInterfaceType(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitInterfaceType"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInterfaceType" ):
                 return visitor.visitInterfaceType(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def interfaceType(self):
 
@@ -4960,16 +5214,16 @@ class ParserGo(Parser):
             self.match(ParserGo.L_CURLY)
             self.state = 636
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self.TokenStream, 60, self._ctx)
-            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
-                if _alt == 1:
+            _alt = self._interp.adaptivePredict(self._input,60,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
                     self.state = 631
                     self.methodSpec()
                     self.state = 632
-                    self.eos()
+                    self.eos() 
                 self.state = 638
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self.TokenStream, 60, self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,60,self._ctx)
 
             self.state = 639
             self.match(ParserGo.R_CURLY)
@@ -4981,9 +5235,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class R_sliceTypeContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -4994,24 +5249,28 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.R_BRACKET, 0)
 
         def elementType(self):
-            return self.getTypedRuleContext(ParserGo.ElementTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.ElementTypeContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_r_sliceType
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterR_sliceType"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterR_sliceType" ):
                 listener.enterR_sliceType(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitR_sliceType"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitR_sliceType" ):
                 listener.exitR_sliceType(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitR_sliceType"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitR_sliceType" ):
                 return visitor.visitR_sliceType(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def r_sliceType(self):
 
@@ -5033,9 +5292,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class MapTypeContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -5046,30 +5306,35 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.L_BRACKET, 0)
 
         def type_(self):
-            return self.getTypedRuleContext(ParserGo.Type_Context, 0)
+            return self.getTypedRuleContext(ParserGo.Type_Context,0)
+
 
         def R_BRACKET(self):
             return self.getToken(ParserGo.R_BRACKET, 0)
 
         def elementType(self):
-            return self.getTypedRuleContext(ParserGo.ElementTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.ElementTypeContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_mapType
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterMapType"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterMapType" ):
                 listener.enterMapType(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitMapType"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitMapType" ):
                 listener.exitMapType(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitMapType"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMapType" ):
                 return visitor.visitMapType(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def mapType(self):
 
@@ -5095,14 +5360,16 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ChannelTypeContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def elementType(self):
-            return self.getTypedRuleContext(ParserGo.ElementTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.ElementTypeContext,0)
+
 
         def CHAN(self):
             return self.getToken(ParserGo.CHAN, 0)
@@ -5113,19 +5380,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_channelType
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterChannelType"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterChannelType" ):
                 listener.enterChannelType(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitChannelType"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitChannelType" ):
                 listener.exitChannelType(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitChannelType"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitChannelType" ):
                 return visitor.visitChannelType(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def channelType(self):
 
@@ -5135,7 +5405,7 @@ class ParserGo(Parser):
             self.enterOuterAlt(localctx, 1)
             self.state = 656
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 61, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,61,self._ctx)
             if la_ == 1:
                 self.state = 651
                 self.match(ParserGo.CHAN)
@@ -5155,6 +5425,7 @@ class ParserGo(Parser):
                 self.match(ParserGo.CHAN)
                 pass
 
+
             self.state = 658
             self.elementType()
         except RecognitionException as re:
@@ -5165,9 +5436,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class MethodSpecContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -5175,30 +5447,36 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.IDENTIFIER, 0)
 
         def parameters(self):
-            return self.getTypedRuleContext(ParserGo.ParametersContext, 0)
+            return self.getTypedRuleContext(ParserGo.ParametersContext,0)
+
 
         def result(self):
-            return self.getTypedRuleContext(ParserGo.ResultContext, 0)
+            return self.getTypedRuleContext(ParserGo.ResultContext,0)
+
 
         def typeName(self):
-            return self.getTypedRuleContext(ParserGo.TypeNameContext, 0)
+            return self.getTypedRuleContext(ParserGo.TypeNameContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_methodSpec
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterMethodSpec"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterMethodSpec" ):
                 listener.enterMethodSpec(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitMethodSpec"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitMethodSpec" ):
                 listener.exitMethodSpec(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitMethodSpec"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMethodSpec" ):
                 return visitor.visitMethodSpec(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def methodSpec(self):
 
@@ -5207,13 +5485,13 @@ class ParserGo(Parser):
         try:
             self.state = 668
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 62, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,62,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 660
-                if not noTerminatorAfterParams(2):
+                if not 'noTerminatorAfterParams(2)':
                     from antlr4.error.Errors import FailedPredicateException
-                    raise FailedPredicateException(self, "noTerminatorAfterParams(2)")
+                    raise FailedPredicateException(self, "'noTerminatorAfterParams(2)'")
                 self.state = 661
                 self.match(ParserGo.IDENTIFIER)
                 self.state = 662
@@ -5245,9 +5523,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class FunctionTypeContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -5255,24 +5534,28 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.FUNC, 0)
 
         def signature(self):
-            return self.getTypedRuleContext(ParserGo.SignatureContext, 0)
+            return self.getTypedRuleContext(ParserGo.SignatureContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_functionType
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterFunctionType"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFunctionType" ):
                 listener.enterFunctionType(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitFunctionType"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFunctionType" ):
                 listener.exitFunctionType(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitFunctionType"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionType" ):
                 return visitor.visitFunctionType(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def functionType(self):
 
@@ -5292,34 +5575,40 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class SignatureContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def parameters(self):
-            return self.getTypedRuleContext(ParserGo.ParametersContext, 0)
+            return self.getTypedRuleContext(ParserGo.ParametersContext,0)
+
 
         def result(self):
-            return self.getTypedRuleContext(ParserGo.ResultContext, 0)
+            return self.getTypedRuleContext(ParserGo.ResultContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_signature
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterSignature"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSignature" ):
                 listener.enterSignature(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitSignature"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSignature" ):
                 listener.exitSignature(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitSignature"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSignature" ):
                 return visitor.visitSignature(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def signature(self):
 
@@ -5328,13 +5617,13 @@ class ParserGo(Parser):
         try:
             self.state = 678
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 63, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,63,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 673
-                if not noTerminatorAfterParams(1):
+                if not 'noTerminatorAfterParams(1)':
                     from antlr4.error.Errors import FailedPredicateException
-                    raise FailedPredicateException(self, "noTerminatorAfterParams(1)")
+                    raise FailedPredicateException(self, "'noTerminatorAfterParams(1)'")
                 self.state = 674
                 self.parameters()
                 self.state = 675
@@ -5356,34 +5645,40 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ResultContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def parameters(self):
-            return self.getTypedRuleContext(ParserGo.ParametersContext, 0)
+            return self.getTypedRuleContext(ParserGo.ParametersContext,0)
+
 
         def type_(self):
-            return self.getTypedRuleContext(ParserGo.Type_Context, 0)
+            return self.getTypedRuleContext(ParserGo.Type_Context,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_result
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterResult"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterResult" ):
                 listener.enterResult(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitResult"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitResult" ):
                 listener.exitResult(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitResult"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitResult" ):
                 return visitor.visitResult(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def result(self):
 
@@ -5392,7 +5687,7 @@ class ParserGo(Parser):
         try:
             self.state = 682
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 64, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,64,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 680
@@ -5414,9 +5709,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ParametersContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -5426,13 +5722,14 @@ class ParserGo(Parser):
         def R_PAREN(self):
             return self.getToken(ParserGo.R_PAREN, 0)
 
-        def parameterDecl(self, i: int = None):
+        def parameterDecl(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.ParameterDeclContext)
             else:
-                return self.getTypedRuleContext(ParserGo.ParameterDeclContext, i)
+                return self.getTypedRuleContext(ParserGo.ParameterDeclContext,i)
 
-        def COMMA(self, i: int = None):
+
+        def COMMA(self, i:int=None):
             if i is None:
                 return self.getTokens(ParserGo.COMMA)
             else:
@@ -5441,58 +5738,60 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_parameters
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterParameters"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterParameters" ):
                 listener.enterParameters(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitParameters"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitParameters" ):
                 listener.exitParameters(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitParameters"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParameters" ):
                 return visitor.visitParameters(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def parameters(self):
 
         localctx = ParserGo.ParametersContext(self, self._ctx, self.state)
         self.enterRule(localctx, 136, self.RULE_parameters)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 684
             self.match(ParserGo.L_PAREN)
             self.state = 696
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                    (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (
-                    1 << ParserGo.CHAN) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (
-                            1 << ParserGo.L_BRACKET) | (1 << ParserGo.ELLIPSIS) | (1 << ParserGo.STAR) | (
-                            1 << ParserGo.RECEIVE))) != 0):
+            _la = self._input.LA(1)
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.ELLIPSIS) | (1 << ParserGo.STAR) | (1 << ParserGo.RECEIVE))) != 0):
                 self.state = 685
                 self.parameterDecl()
                 self.state = 690
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self.TokenStream, 65, self._ctx)
-                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
-                    if _alt == 1:
+                _alt = self._interp.adaptivePredict(self._input,65,self._ctx)
+                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                    if _alt==1:
                         self.state = 686
                         self.match(ParserGo.COMMA)
                         self.state = 687
-                        self.parameterDecl()
+                        self.parameterDecl() 
                     self.state = 692
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self.TokenStream, 65, self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input,65,self._ctx)
 
                 self.state = 694
                 self._errHandler.sync(self)
-                _la = self.TokenStream.LA(1)
-                if _la == ParserGo.COMMA:
+                _la = self._input.LA(1)
+                if _la==ParserGo.COMMA:
                     self.state = 693
                     self.match(ParserGo.COMMA)
+
+
+
 
             self.state = 698
             self.match(ParserGo.R_PAREN)
@@ -5504,17 +5803,20 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ParameterDeclContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def type_(self):
-            return self.getTypedRuleContext(ParserGo.Type_Context, 0)
+            return self.getTypedRuleContext(ParserGo.Type_Context,0)
+
 
         def identifierList(self):
-            return self.getTypedRuleContext(ParserGo.IdentifierListContext, 0)
+            return self.getTypedRuleContext(ParserGo.IdentifierListContext,0)
+
 
         def ELLIPSIS(self):
             return self.getToken(ParserGo.ELLIPSIS, 0)
@@ -5522,40 +5824,45 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_parameterDecl
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterParameterDecl"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterParameterDecl" ):
                 listener.enterParameterDecl(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitParameterDecl"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitParameterDecl" ):
                 listener.exitParameterDecl(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitParameterDecl"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParameterDecl" ):
                 return visitor.visitParameterDecl(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def parameterDecl(self):
 
         localctx = ParserGo.ParameterDeclContext(self, self._ctx, self.state)
         self.enterRule(localctx, 138, self.RULE_parameterDecl)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 701
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 68, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,68,self._ctx)
             if la_ == 1:
                 self.state = 700
                 self.identifierList()
 
+
             self.state = 704
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            if _la == ParserGo.ELLIPSIS:
+            _la = self._input.LA(1)
+            if _la==ParserGo.ELLIPSIS:
                 self.state = 703
                 self.match(ParserGo.ELLIPSIS)
+
 
             self.state = 706
             self.type_()
@@ -5567,23 +5874,27 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def primaryExpr(self):
-            return self.getTypedRuleContext(ParserGo.PrimaryExprContext, 0)
+            return self.getTypedRuleContext(ParserGo.PrimaryExprContext,0)
+
 
         def unaryExpr(self):
-            return self.getTypedRuleContext(ParserGo.UnaryExprContext, 0)
+            return self.getTypedRuleContext(ParserGo.UnaryExprContext,0)
 
-        def expression(self, i: int = None):
+
+        def expression(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.ExpressionContext)
             else:
-                return self.getTypedRuleContext(ParserGo.ExpressionContext, i)
+                return self.getTypedRuleContext(ParserGo.ExpressionContext,i)
+
 
         def STAR(self):
             return self.getToken(ParserGo.STAR, 0)
@@ -5645,33 +5956,35 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_expression
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterExpression"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExpression" ):
                 listener.enterExpression(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitExpression"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExpression" ):
                 listener.exitExpression(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitExpression"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExpression" ):
                 return visitor.visitExpression(self)
             else:
                 return visitor.visitChildren(self)
 
-    def expression(self, _p: int = 0):
+
+
+    def expression(self, _p:int=0):
         _parentctx = self._ctx
         _parentState = self.state
         localctx = ParserGo.ExpressionContext(self, self._ctx, _parentState)
         _prevctx = localctx
         _startState = 140
         self.enterRecursionRule(localctx, 140, self.RULE_expression, _p)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 711
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 70, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,70,self._ctx)
             if la_ == 1:
                 self.state = 709
                 self.primaryExpr(0)
@@ -5682,18 +5995,19 @@ class ParserGo(Parser):
                 self.unaryExpr()
                 pass
 
-            self._ctx.stop = self.TokenStream.LT(-1)
+
+            self._ctx.stop = self._input.LT(-1)
             self.state = 730
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self.TokenStream, 72, self._ctx)
-            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
-                if _alt == 1:
+            _alt = self._interp.adaptivePredict(self._input,72,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
                     self.state = 728
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self.TokenStream, 71, self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input,71,self._ctx)
                     if la_ == 1:
                         localctx = ParserGo.ExpressionContext(self, _parentctx, _parentState)
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
@@ -5702,11 +6016,8 @@ class ParserGo(Parser):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
                         self.state = 714
-                        _la = self.TokenStream.LA(1)
-                        if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                (1 << ParserGo.DIV) | (1 << ParserGo.MOD) | (1 << ParserGo.LSHIFT) | (
-                                1 << ParserGo.RSHIFT) | (1 << ParserGo.BIT_CLEAR) | (1 << ParserGo.STAR) | (
-                                        1 << ParserGo.AMPERSAND))) != 0)):
+                        _la = self._input.LA(1)
+                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.DIV) | (1 << ParserGo.MOD) | (1 << ParserGo.LSHIFT) | (1 << ParserGo.RSHIFT) | (1 << ParserGo.BIT_CLEAR) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND))) != 0)):
                             self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -5723,10 +6034,8 @@ class ParserGo(Parser):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
                         self.state = 717
-                        _la = self.TokenStream.LA(1)
-                        if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                (1 << ParserGo.OR) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (
-                                1 << ParserGo.CARET))) != 0)):
+                        _la = self._input.LA(1)
+                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.OR) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET))) != 0)):
                             self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -5743,11 +6052,8 @@ class ParserGo(Parser):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
                         self.state = 720
-                        _la = self.TokenStream.LA(1)
-                        if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                (1 << ParserGo.EQUALS) | (1 << ParserGo.NOT_EQUALS) | (1 << ParserGo.LESS) | (
-                                1 << ParserGo.LESS_OR_EQUALS) | (1 << ParserGo.GREATER) | (
-                                        1 << ParserGo.GREATER_OR_EQUALS))) != 0)):
+                        _la = self._input.LA(1)
+                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.EQUALS) | (1 << ParserGo.NOT_EQUALS) | (1 << ParserGo.LESS) | (1 << ParserGo.LESS_OR_EQUALS) | (1 << ParserGo.GREATER) | (1 << ParserGo.GREATER_OR_EQUALS))) != 0)):
                             self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -5782,9 +6088,10 @@ class ParserGo(Parser):
                         self.expression(2)
                         pass
 
+             
                 self.state = 732
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self.TokenStream, 72, self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,72,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -5794,20 +6101,24 @@ class ParserGo(Parser):
             self.unrollRecursionContexts(_parentctx)
         return localctx
 
+
     class PrimaryExprContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def operand(self):
-            return self.getTypedRuleContext(ParserGo.OperandContext, 0)
+            return self.getTypedRuleContext(ParserGo.OperandContext,0)
+
 
         def conversion(self):
-            return self.getTypedRuleContext(ParserGo.ConversionContext, 0)
+            return self.getTypedRuleContext(ParserGo.ConversionContext,0)
+
 
         def primaryExpr(self):
-            return self.getTypedRuleContext(ParserGo.PrimaryExprContext, 0)
+            return self.getTypedRuleContext(ParserGo.PrimaryExprContext,0)
+
 
         def DOT(self):
             return self.getToken(ParserGo.DOT, 0)
@@ -5816,35 +6127,41 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.IDENTIFIER, 0)
 
         def index(self):
-            return self.getTypedRuleContext(ParserGo.IndexContext, 0)
+            return self.getTypedRuleContext(ParserGo.IndexContext,0)
+
 
         def r_slice(self):
-            return self.getTypedRuleContext(ParserGo.R_sliceContext, 0)
+            return self.getTypedRuleContext(ParserGo.R_sliceContext,0)
+
 
         def typeAssertion(self):
-            return self.getTypedRuleContext(ParserGo.TypeAssertionContext, 0)
+            return self.getTypedRuleContext(ParserGo.TypeAssertionContext,0)
+
 
         def arguments(self):
-            return self.getTypedRuleContext(ParserGo.ArgumentsContext, 0)
+            return self.getTypedRuleContext(ParserGo.ArgumentsContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_primaryExpr
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterPrimaryExpr"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPrimaryExpr" ):
                 listener.enterPrimaryExpr(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitPrimaryExpr"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPrimaryExpr" ):
                 listener.exitPrimaryExpr(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitPrimaryExpr"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrimaryExpr" ):
                 return visitor.visitPrimaryExpr(self)
             else:
                 return visitor.visitChildren(self)
 
-    def primaryExpr(self, _p: int = 0):
+
+
+    def primaryExpr(self, _p:int=0):
         _parentctx = self._ctx
         _parentState = self.state
         localctx = ParserGo.PrimaryExprContext(self, self._ctx, _parentState)
@@ -5855,7 +6172,7 @@ class ParserGo(Parser):
             self.enterOuterAlt(localctx, 1)
             self.state = 736
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 73, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,73,self._ctx)
             if la_ == 1:
                 self.state = 734
                 self.operand()
@@ -5866,12 +6183,13 @@ class ParserGo(Parser):
                 self.conversion()
                 pass
 
-            self._ctx.stop = self.TokenStream.LT(-1)
+
+            self._ctx.stop = self._input.LT(-1)
             self.state = 749
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self.TokenStream, 75, self._ctx)
-            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
-                if _alt == 1:
+            _alt = self._interp.adaptivePredict(self._input,75,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
@@ -5883,7 +6201,7 @@ class ParserGo(Parser):
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 1)")
                     self.state = 745
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self.TokenStream, 74, self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input,74,self._ctx)
                     if la_ == 1:
                         self.state = 739
                         self.match(ParserGo.DOT)
@@ -5911,9 +6229,10 @@ class ParserGo(Parser):
                         self.arguments()
                         pass
 
+             
                 self.state = 751
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self.TokenStream, 75, self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,75,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -5923,17 +6242,20 @@ class ParserGo(Parser):
             self.unrollRecursionContexts(_parentctx)
         return localctx
 
+
     class UnaryExprContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def primaryExpr(self):
-            return self.getTypedRuleContext(ParserGo.PrimaryExprContext, 0)
+            return self.getTypedRuleContext(ParserGo.PrimaryExprContext,0)
+
 
         def expression(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionContext,0)
+
 
         def PLUS(self):
             return self.getToken(ParserGo.PLUS, 0)
@@ -5959,29 +6281,32 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_unaryExpr
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterUnaryExpr"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterUnaryExpr" ):
                 listener.enterUnaryExpr(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitUnaryExpr"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitUnaryExpr" ):
                 listener.exitUnaryExpr(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitUnaryExpr"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUnaryExpr" ):
                 return visitor.visitUnaryExpr(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def unaryExpr(self):
 
         localctx = ParserGo.UnaryExprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 144, self.RULE_unaryExpr)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.state = 755
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 76, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,76,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 752
@@ -5991,11 +6316,8 @@ class ParserGo(Parser):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 753
-                _la = self.TokenStream.LA(1)
-                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                        (1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (
-                        1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (
-                                1 << ParserGo.RECEIVE))) != 0)):
+                _la = self._input.LA(1)
+                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (1 << ParserGo.RECEIVE))) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -6013,20 +6335,23 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ConversionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def type_(self):
-            return self.getTypedRuleContext(ParserGo.Type_Context, 0)
+            return self.getTypedRuleContext(ParserGo.Type_Context,0)
+
 
         def L_PAREN(self):
             return self.getToken(ParserGo.L_PAREN, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionContext,0)
+
 
         def R_PAREN(self):
             return self.getToken(ParserGo.R_PAREN, 0)
@@ -6037,25 +6362,28 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_conversion
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterConversion"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterConversion" ):
                 listener.enterConversion(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitConversion"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitConversion" ):
                 listener.exitConversion(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitConversion"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConversion" ):
                 return visitor.visitConversion(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def conversion(self):
 
         localctx = ParserGo.ConversionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 146, self.RULE_conversion)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 757
@@ -6066,10 +6394,11 @@ class ParserGo(Parser):
             self.expression(0)
             self.state = 761
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            if _la == ParserGo.COMMA:
+            _la = self._input.LA(1)
+            if _la==ParserGo.COMMA:
                 self.state = 760
                 self.match(ParserGo.COMMA)
+
 
             self.state = 763
             self.match(ParserGo.R_PAREN)
@@ -6081,26 +6410,31 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class OperandContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def literal(self):
-            return self.getTypedRuleContext(ParserGo.LiteralContext, 0)
+            return self.getTypedRuleContext(ParserGo.LiteralContext,0)
+
 
         def operandName(self):
-            return self.getTypedRuleContext(ParserGo.OperandNameContext, 0)
+            return self.getTypedRuleContext(ParserGo.OperandNameContext,0)
+
 
         def methodExpr(self):
-            return self.getTypedRuleContext(ParserGo.MethodExprContext, 0)
+            return self.getTypedRuleContext(ParserGo.MethodExprContext,0)
+
 
         def L_PAREN(self):
             return self.getToken(ParserGo.L_PAREN, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionContext,0)
+
 
         def R_PAREN(self):
             return self.getToken(ParserGo.R_PAREN, 0)
@@ -6108,19 +6442,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_operand
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterOperand"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterOperand" ):
                 listener.enterOperand(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitOperand"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitOperand" ):
                 listener.exitOperand(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitOperand"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOperand" ):
                 return visitor.visitOperand(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def operand(self):
 
@@ -6129,7 +6466,7 @@ class ParserGo(Parser):
         try:
             self.state = 772
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 78, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,78,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 765
@@ -6167,37 +6504,44 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class LiteralContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def basicLit(self):
-            return self.getTypedRuleContext(ParserGo.BasicLitContext, 0)
+            return self.getTypedRuleContext(ParserGo.BasicLitContext,0)
+
 
         def compositeLit(self):
-            return self.getTypedRuleContext(ParserGo.CompositeLitContext, 0)
+            return self.getTypedRuleContext(ParserGo.CompositeLitContext,0)
+
 
         def functionLit(self):
-            return self.getTypedRuleContext(ParserGo.FunctionLitContext, 0)
+            return self.getTypedRuleContext(ParserGo.FunctionLitContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_literal
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterLiteral"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLiteral" ):
                 listener.enterLiteral(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitLiteral"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLiteral" ):
                 listener.exitLiteral(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitLiteral"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLiteral" ):
                 return visitor.visitLiteral(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def literal(self):
 
@@ -6206,10 +6550,8 @@ class ParserGo(Parser):
         try:
             self.state = 777
             self._errHandler.sync(self)
-            token = self.TokenStream.LA(1)
-            if token in [ParserGo.NIL_LIT, ParserGo.DECIMAL_LIT, ParserGo.OCTAL_LIT, ParserGo.HEX_LIT,
-                         ParserGo.FLOAT_LIT, ParserGo.IMAGINARY_LIT, ParserGo.RUNE_LIT, ParserGo.RAW_STRING_LIT,
-                         ParserGo.INTERPRETED_STRING_LIT]:
+            token = self._input.LA(1)
+            if token in [ParserGo.NIL_LIT, ParserGo.DECIMAL_LIT, ParserGo.OCTAL_LIT, ParserGo.HEX_LIT, ParserGo.FLOAT_LIT, ParserGo.IMAGINARY_LIT, ParserGo.RUNE_LIT, ParserGo.RAW_STRING_LIT, ParserGo.INTERPRETED_STRING_LIT]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 774
                 self.basicLit()
@@ -6235,9 +6577,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class BasicLitContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -6245,10 +6588,12 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.NIL_LIT, 0)
 
         def integer(self):
-            return self.getTypedRuleContext(ParserGo.IntegerContext, 0)
+            return self.getTypedRuleContext(ParserGo.IntegerContext,0)
+
 
         def string_(self):
-            return self.getTypedRuleContext(ParserGo.String_Context, 0)
+            return self.getTypedRuleContext(ParserGo.String_Context,0)
+
 
         def FLOAT_LIT(self):
             return self.getToken(ParserGo.FLOAT_LIT, 0)
@@ -6262,19 +6607,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_basicLit
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterBasicLit"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterBasicLit" ):
                 listener.enterBasicLit(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitBasicLit"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitBasicLit" ):
                 listener.exitBasicLit(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitBasicLit"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBasicLit" ):
                 return visitor.visitBasicLit(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def basicLit(self):
 
@@ -6283,7 +6631,7 @@ class ParserGo(Parser):
         try:
             self.state = 785
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 80, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,80,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 779
@@ -6329,9 +6677,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class IntegerContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -6353,33 +6702,33 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_integer
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterInteger"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterInteger" ):
                 listener.enterInteger(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitInteger"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitInteger" ):
                 listener.exitInteger(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitInteger"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInteger" ):
                 return visitor.visitInteger(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def integer(self):
 
         localctx = ParserGo.IntegerContext(self, self._ctx, self.state)
         self.enterRule(localctx, 154, self.RULE_integer)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 787
-            _la = self.TokenStream.LA(1)
-            if not (((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & (
-                    (1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (
-                    1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.IMAGINARY_LIT - 64)) | (
-                            1 << (ParserGo.RUNE_LIT - 64)))) != 0)):
+            _la = self._input.LA(1)
+            if not(((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -6392,9 +6741,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class OperandNameContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -6402,24 +6752,28 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.IDENTIFIER, 0)
 
         def qualifiedIdent(self):
-            return self.getTypedRuleContext(ParserGo.QualifiedIdentContext, 0)
+            return self.getTypedRuleContext(ParserGo.QualifiedIdentContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_operandName
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterOperandName"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterOperandName" ):
                 listener.enterOperandName(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitOperandName"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitOperandName" ):
                 listener.exitOperandName(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitOperandName"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOperandName" ):
                 return visitor.visitOperandName(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def operandName(self):
 
@@ -6428,7 +6782,7 @@ class ParserGo(Parser):
         try:
             self.state = 791
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 81, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,81,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 789
@@ -6450,13 +6804,14 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class QualifiedIdentContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def IDENTIFIER(self, i: int = None):
+        def IDENTIFIER(self, i:int=None):
             if i is None:
                 return self.getTokens(ParserGo.IDENTIFIER)
             else:
@@ -6468,19 +6823,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_qualifiedIdent
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterQualifiedIdent"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterQualifiedIdent" ):
                 listener.enterQualifiedIdent(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitQualifiedIdent"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitQualifiedIdent" ):
                 listener.exitQualifiedIdent(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitQualifiedIdent"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitQualifiedIdent" ):
                 return visitor.visitQualifiedIdent(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def qualifiedIdent(self):
 
@@ -6502,34 +6860,40 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class CompositeLitContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def literalType(self):
-            return self.getTypedRuleContext(ParserGo.LiteralTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.LiteralTypeContext,0)
+
 
         def literalValue(self):
-            return self.getTypedRuleContext(ParserGo.LiteralValueContext, 0)
+            return self.getTypedRuleContext(ParserGo.LiteralValueContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_compositeLit
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterCompositeLit"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterCompositeLit" ):
                 listener.enterCompositeLit(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitCompositeLit"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitCompositeLit" ):
                 listener.exitCompositeLit(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitCompositeLit"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCompositeLit" ):
                 return visitor.visitCompositeLit(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def compositeLit(self):
 
@@ -6549,17 +6913,20 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class LiteralTypeContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def structType(self):
-            return self.getTypedRuleContext(ParserGo.StructTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.StructTypeContext,0)
+
 
         def arrayType(self):
-            return self.getTypedRuleContext(ParserGo.ArrayTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.ArrayTypeContext,0)
+
 
         def L_BRACKET(self):
             return self.getToken(ParserGo.L_BRACKET, 0)
@@ -6571,33 +6938,40 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.R_BRACKET, 0)
 
         def elementType(self):
-            return self.getTypedRuleContext(ParserGo.ElementTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.ElementTypeContext,0)
+
 
         def r_sliceType(self):
-            return self.getTypedRuleContext(ParserGo.R_sliceTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.R_sliceTypeContext,0)
+
 
         def mapType(self):
-            return self.getTypedRuleContext(ParserGo.MapTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.MapTypeContext,0)
+
 
         def typeName(self):
-            return self.getTypedRuleContext(ParserGo.TypeNameContext, 0)
+            return self.getTypedRuleContext(ParserGo.TypeNameContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_literalType
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterLiteralType"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLiteralType" ):
                 listener.enterLiteralType(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitLiteralType"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLiteralType" ):
                 listener.exitLiteralType(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitLiteralType"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLiteralType" ):
                 return visitor.visitLiteralType(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def literalType(self):
 
@@ -6606,7 +6980,7 @@ class ParserGo(Parser):
         try:
             self.state = 809
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 82, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,82,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 800
@@ -6658,9 +7032,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class LiteralValueContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -6671,7 +7046,8 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.R_CURLY, 0)
 
         def elementList(self):
-            return self.getTypedRuleContext(ParserGo.ElementListContext, 0)
+            return self.getTypedRuleContext(ParserGo.ElementListContext,0)
+
 
         def COMMA(self):
             return self.getToken(ParserGo.COMMA, 0)
@@ -6679,52 +7055,47 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_literalValue
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterLiteralValue"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLiteralValue" ):
                 listener.enterLiteralValue(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitLiteralValue"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLiteralValue" ):
                 listener.exitLiteralValue(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitLiteralValue"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLiteralValue" ):
                 return visitor.visitLiteralValue(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def literalValue(self):
 
         localctx = ParserGo.LiteralValueContext(self, self._ctx, self.state)
         self.enterRule(localctx, 164, self.RULE_literalValue)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 811
             self.match(ParserGo.L_CURLY)
             self.state = 816
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                    (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (
-                    1 << ParserGo.CHAN) | (1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (
-                            1 << ParserGo.L_PAREN) | (1 << ParserGo.L_CURLY) | (1 << ParserGo.L_BRACKET) | (
-                            1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (
-                            1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (
-                            1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & (
-                    (1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (
-                    1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (
-                            1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (
-                            1 << (ParserGo.RAW_STRING_LIT - 64)) | (
-                            1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
+            _la = self._input.LA(1)
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (1 << ParserGo.L_CURLY) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (1 << (ParserGo.RAW_STRING_LIT - 64)) | (1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
                 self.state = 812
                 self.elementList()
                 self.state = 814
                 self._errHandler.sync(self)
-                _la = self.TokenStream.LA(1)
-                if _la == ParserGo.COMMA:
+                _la = self._input.LA(1)
+                if _la==ParserGo.COMMA:
                     self.state = 813
                     self.match(ParserGo.COMMA)
+
+
+
 
             self.state = 818
             self.match(ParserGo.R_CURLY)
@@ -6736,19 +7107,21 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ElementListContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def keyedElement(self, i: int = None):
+        def keyedElement(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.KeyedElementContext)
             else:
-                return self.getTypedRuleContext(ParserGo.KeyedElementContext, i)
+                return self.getTypedRuleContext(ParserGo.KeyedElementContext,i)
 
-        def COMMA(self, i: int = None):
+
+        def COMMA(self, i:int=None):
             if i is None:
                 return self.getTokens(ParserGo.COMMA)
             else:
@@ -6757,19 +7130,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_elementList
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterElementList"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterElementList" ):
                 listener.enterElementList(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitElementList"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitElementList" ):
                 listener.exitElementList(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitElementList"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitElementList" ):
                 return visitor.visitElementList(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def elementList(self):
 
@@ -6781,16 +7157,16 @@ class ParserGo(Parser):
             self.keyedElement()
             self.state = 825
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self.TokenStream, 85, self._ctx)
-            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
-                if _alt == 1:
+            _alt = self._interp.adaptivePredict(self._input,85,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
                     self.state = 821
                     self.match(ParserGo.COMMA)
                     self.state = 822
-                    self.keyedElement()
+                    self.keyedElement() 
                 self.state = 827
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self.TokenStream, 85, self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,85,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -6800,17 +7176,20 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class KeyedElementContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def element(self):
-            return self.getTypedRuleContext(ParserGo.ElementContext, 0)
+            return self.getTypedRuleContext(ParserGo.ElementContext,0)
+
 
         def key(self):
-            return self.getTypedRuleContext(ParserGo.KeyContext, 0)
+            return self.getTypedRuleContext(ParserGo.KeyContext,0)
+
 
         def COLON(self):
             return self.getToken(ParserGo.COLON, 0)
@@ -6818,19 +7197,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_keyedElement
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterKeyedElement"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterKeyedElement" ):
                 listener.enterKeyedElement(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitKeyedElement"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitKeyedElement" ):
                 listener.exitKeyedElement(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitKeyedElement"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitKeyedElement" ):
                 return visitor.visitKeyedElement(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def keyedElement(self):
 
@@ -6840,12 +7222,13 @@ class ParserGo(Parser):
             self.enterOuterAlt(localctx, 1)
             self.state = 831
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 86, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,86,self._ctx)
             if la_ == 1:
                 self.state = 828
                 self.key()
                 self.state = 829
                 self.match(ParserGo.COLON)
+
 
             self.state = 833
             self.element()
@@ -6857,9 +7240,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class KeyContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -6867,27 +7251,32 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.IDENTIFIER, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionContext,0)
+
 
         def literalValue(self):
-            return self.getTypedRuleContext(ParserGo.LiteralValueContext, 0)
+            return self.getTypedRuleContext(ParserGo.LiteralValueContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_key
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterKey"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterKey" ):
                 listener.enterKey(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitKey"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitKey" ):
                 listener.exitKey(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitKey"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitKey" ):
                 return visitor.visitKey(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def key(self):
 
@@ -6896,7 +7285,7 @@ class ParserGo(Parser):
         try:
             self.state = 838
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 87, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,87,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 835
@@ -6924,34 +7313,40 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ElementContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def expression(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionContext,0)
+
 
         def literalValue(self):
-            return self.getTypedRuleContext(ParserGo.LiteralValueContext, 0)
+            return self.getTypedRuleContext(ParserGo.LiteralValueContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_element
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterElement"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterElement" ):
                 listener.enterElement(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitElement"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitElement" ):
                 listener.exitElement(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitElement"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitElement" ):
                 return visitor.visitElement(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def element(self):
 
@@ -6960,13 +7355,8 @@ class ParserGo(Parser):
         try:
             self.state = 842
             self._errHandler.sync(self)
-            token = self.TokenStream.LA(1)
-            if token in [ParserGo.FUNC, ParserGo.INTERFACE, ParserGo.MAP, ParserGo.STRUCT, ParserGo.CHAN,
-                         ParserGo.NIL_LIT, ParserGo.IDENTIFIER, ParserGo.L_PAREN, ParserGo.L_BRACKET,
-                         ParserGo.EXCLAMATION, ParserGo.PLUS, ParserGo.MINUS, ParserGo.CARET, ParserGo.STAR,
-                         ParserGo.AMPERSAND, ParserGo.RECEIVE, ParserGo.DECIMAL_LIT, ParserGo.OCTAL_LIT,
-                         ParserGo.HEX_LIT, ParserGo.FLOAT_LIT, ParserGo.IMAGINARY_LIT, ParserGo.RUNE_LIT,
-                         ParserGo.RAW_STRING_LIT, ParserGo.INTERPRETED_STRING_LIT]:
+            token = self._input.LA(1)
+            if token in [ParserGo.FUNC, ParserGo.INTERFACE, ParserGo.MAP, ParserGo.STRUCT, ParserGo.CHAN, ParserGo.NIL_LIT, ParserGo.IDENTIFIER, ParserGo.L_PAREN, ParserGo.L_BRACKET, ParserGo.EXCLAMATION, ParserGo.PLUS, ParserGo.MINUS, ParserGo.CARET, ParserGo.STAR, ParserGo.AMPERSAND, ParserGo.RECEIVE, ParserGo.DECIMAL_LIT, ParserGo.OCTAL_LIT, ParserGo.HEX_LIT, ParserGo.FLOAT_LIT, ParserGo.IMAGINARY_LIT, ParserGo.RUNE_LIT, ParserGo.RAW_STRING_LIT, ParserGo.INTERPRETED_STRING_LIT]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 840
                 self.expression(0)
@@ -6987,9 +7377,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class StructTypeContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -7002,34 +7393,39 @@ class ParserGo(Parser):
         def R_CURLY(self):
             return self.getToken(ParserGo.R_CURLY, 0)
 
-        def fieldDecl(self, i: int = None):
+        def fieldDecl(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.FieldDeclContext)
             else:
-                return self.getTypedRuleContext(ParserGo.FieldDeclContext, i)
+                return self.getTypedRuleContext(ParserGo.FieldDeclContext,i)
 
-        def eos(self, i: int = None):
+
+        def eos(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.EosContext)
             else:
-                return self.getTypedRuleContext(ParserGo.EosContext, i)
+                return self.getTypedRuleContext(ParserGo.EosContext,i)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_structType
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterStructType"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterStructType" ):
                 listener.enterStructType(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitStructType"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitStructType" ):
                 listener.exitStructType(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitStructType"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStructType" ):
                 return visitor.visitStructType(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def structType(self):
 
@@ -7043,16 +7439,16 @@ class ParserGo(Parser):
             self.match(ParserGo.L_CURLY)
             self.state = 851
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self.TokenStream, 89, self._ctx)
-            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
-                if _alt == 1:
+            _alt = self._interp.adaptivePredict(self._input,89,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
                     self.state = 846
                     self.fieldDecl()
                     self.state = 847
-                    self.eos()
+                    self.eos() 
                 self.state = 853
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self.TokenStream, 89, self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,89,self._ctx)
 
             self.state = 854
             self.match(ParserGo.R_CURLY)
@@ -7064,40 +7460,48 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class FieldDeclContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def identifierList(self):
-            return self.getTypedRuleContext(ParserGo.IdentifierListContext, 0)
+            return self.getTypedRuleContext(ParserGo.IdentifierListContext,0)
+
 
         def type_(self):
-            return self.getTypedRuleContext(ParserGo.Type_Context, 0)
+            return self.getTypedRuleContext(ParserGo.Type_Context,0)
+
 
         def anonymousField(self):
-            return self.getTypedRuleContext(ParserGo.AnonymousFieldContext, 0)
+            return self.getTypedRuleContext(ParserGo.AnonymousFieldContext,0)
+
 
         def string_(self):
-            return self.getTypedRuleContext(ParserGo.String_Context, 0)
+            return self.getTypedRuleContext(ParserGo.String_Context,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_fieldDecl
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterFieldDecl"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFieldDecl" ):
                 listener.enterFieldDecl(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitFieldDecl"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFieldDecl" ):
                 listener.exitFieldDecl(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitFieldDecl"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFieldDecl" ):
                 return visitor.visitFieldDecl(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def fieldDecl(self):
 
@@ -7107,12 +7511,12 @@ class ParserGo(Parser):
             self.enterOuterAlt(localctx, 1)
             self.state = 861
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 90, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,90,self._ctx)
             if la_ == 1:
                 self.state = 856
-                if not noTerminatorBetween(2):
+                if not 'noTerminatorBetween(2)':
                     from antlr4.error.Errors import FailedPredicateException
-                    raise FailedPredicateException(self, "noTerminatorBetween(2)")
+                    raise FailedPredicateException(self, "'noTerminatorBetween(2)'")
                 self.state = 857
                 self.identifierList()
                 self.state = 858
@@ -7124,9 +7528,10 @@ class ParserGo(Parser):
                 self.anonymousField()
                 pass
 
+
             self.state = 864
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 91, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,91,self._ctx)
             if la_ == 1:
                 self.state = 863
                 self.string_()
@@ -7140,9 +7545,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class String_Context(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -7155,30 +7561,33 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_string_
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterString_"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterString_" ):
                 listener.enterString_(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitString_"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitString_" ):
                 listener.exitString_(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitString_"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitString_" ):
                 return visitor.visitString_(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def string_(self):
 
         localctx = ParserGo.String_Context(self, self._ctx, self.state)
         self.enterRule(localctx, 178, self.RULE_string_)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 866
-            _la = self.TokenStream.LA(1)
-            if not (_la == ParserGo.RAW_STRING_LIT or _la == ParserGo.INTERPRETED_STRING_LIT):
+            _la = self._input.LA(1)
+            if not(_la==ParserGo.RAW_STRING_LIT or _la==ParserGo.INTERPRETED_STRING_LIT):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -7191,14 +7600,16 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class AnonymousFieldContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def typeName(self):
-            return self.getTypedRuleContext(ParserGo.TypeNameContext, 0)
+            return self.getTypedRuleContext(ParserGo.TypeNameContext,0)
+
 
         def STAR(self):
             return self.getToken(ParserGo.STAR, 0)
@@ -7206,33 +7617,37 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_anonymousField
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterAnonymousField"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAnonymousField" ):
                 listener.enterAnonymousField(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitAnonymousField"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAnonymousField" ):
                 listener.exitAnonymousField(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitAnonymousField"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAnonymousField" ):
                 return visitor.visitAnonymousField(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def anonymousField(self):
 
         localctx = ParserGo.AnonymousFieldContext(self, self._ctx, self.state)
         self.enterRule(localctx, 180, self.RULE_anonymousField)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 869
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            if _la == ParserGo.STAR:
+            _la = self._input.LA(1)
+            if _la==ParserGo.STAR:
                 self.state = 868
                 self.match(ParserGo.STAR)
+
 
             self.state = 871
             self.typeName()
@@ -7244,9 +7659,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class FunctionLitContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -7254,27 +7670,32 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.FUNC, 0)
 
         def signature(self):
-            return self.getTypedRuleContext(ParserGo.SignatureContext, 0)
+            return self.getTypedRuleContext(ParserGo.SignatureContext,0)
+
 
         def block(self):
-            return self.getTypedRuleContext(ParserGo.BlockContext, 0)
+            return self.getTypedRuleContext(ParserGo.BlockContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_functionLit
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterFunctionLit"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFunctionLit" ):
                 listener.enterFunctionLit(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitFunctionLit"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFunctionLit" ):
                 listener.exitFunctionLit(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitFunctionLit"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionLit" ):
                 return visitor.visitFunctionLit(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def functionLit(self):
 
@@ -7296,9 +7717,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class IndexContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -7306,7 +7728,8 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.L_BRACKET, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionContext,0)
+
 
         def R_BRACKET(self):
             return self.getToken(ParserGo.R_BRACKET, 0)
@@ -7314,19 +7737,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_index
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterIndex"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterIndex" ):
                 listener.enterIndex(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitIndex"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitIndex" ):
                 listener.exitIndex(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitIndex"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIndex" ):
                 return visitor.visitIndex(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def index(self):
 
@@ -7348,9 +7774,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class R_sliceContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -7360,109 +7787,80 @@ class ParserGo(Parser):
         def R_BRACKET(self):
             return self.getToken(ParserGo.R_BRACKET, 0)
 
-        def COLON(self, i: int = None):
+        def COLON(self, i:int=None):
             if i is None:
                 return self.getTokens(ParserGo.COLON)
             else:
                 return self.getToken(ParserGo.COLON, i)
 
-        def expression(self, i: int = None):
+        def expression(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(ParserGo.ExpressionContext)
             else:
-                return self.getTypedRuleContext(ParserGo.ExpressionContext, i)
+                return self.getTypedRuleContext(ParserGo.ExpressionContext,i)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_r_slice
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterR_slice"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterR_slice" ):
                 listener.enterR_slice(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitR_slice"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitR_slice" ):
                 listener.exitR_slice(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitR_slice"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitR_slice" ):
                 return visitor.visitR_slice(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def r_slice(self):
 
         localctx = ParserGo.R_sliceContext(self, self._ctx, self.state)
         self.enterRule(localctx, 186, self.RULE_r_slice)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 881
             self.match(ParserGo.L_BRACKET)
             self.state = 897
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 96, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,96,self._ctx)
             if la_ == 1:
                 self.state = 883
                 self._errHandler.sync(self)
-                _la = self.TokenStream.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                        (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (
-                        1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.NIL_LIT) | (
-                                1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (1 << ParserGo.L_BRACKET) | (
-                                1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (
-                                1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (
-                                1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and (
-                        (1 << (_la - 64)) & ((1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (
-                        1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (
-                                                     1 << (ParserGo.IMAGINARY_LIT - 64)) | (
-                                                     1 << (ParserGo.RUNE_LIT - 64)) | (
-                                                     1 << (ParserGo.RAW_STRING_LIT - 64)) | (
-                                                     1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
+                _la = self._input.LA(1)
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (1 << (ParserGo.RAW_STRING_LIT - 64)) | (1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
                     self.state = 882
                     self.expression(0)
+
 
                 self.state = 885
                 self.match(ParserGo.COLON)
                 self.state = 887
                 self._errHandler.sync(self)
-                _la = self.TokenStream.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                        (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (
-                        1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.NIL_LIT) | (
-                                1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (1 << ParserGo.L_BRACKET) | (
-                                1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (
-                                1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (
-                                1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and (
-                        (1 << (_la - 64)) & ((1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (
-                        1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (
-                                                     1 << (ParserGo.IMAGINARY_LIT - 64)) | (
-                                                     1 << (ParserGo.RUNE_LIT - 64)) | (
-                                                     1 << (ParserGo.RAW_STRING_LIT - 64)) | (
-                                                     1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
+                _la = self._input.LA(1)
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (1 << (ParserGo.RAW_STRING_LIT - 64)) | (1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
                     self.state = 886
                     self.expression(0)
+
 
                 pass
 
             elif la_ == 2:
                 self.state = 890
                 self._errHandler.sync(self)
-                _la = self.TokenStream.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                        (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (
-                        1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.NIL_LIT) | (
-                                1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (1 << ParserGo.L_BRACKET) | (
-                                1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (
-                                1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (
-                                1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and (
-                        (1 << (_la - 64)) & ((1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (
-                        1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (
-                                                     1 << (ParserGo.IMAGINARY_LIT - 64)) | (
-                                                     1 << (ParserGo.RUNE_LIT - 64)) | (
-                                                     1 << (ParserGo.RAW_STRING_LIT - 64)) | (
-                                                     1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
+                _la = self._input.LA(1)
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (1 << (ParserGo.RAW_STRING_LIT - 64)) | (1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
                     self.state = 889
                     self.expression(0)
+
 
                 self.state = 892
                 self.match(ParserGo.COLON)
@@ -7474,6 +7872,7 @@ class ParserGo(Parser):
                 self.expression(0)
                 pass
 
+
             self.state = 899
             self.match(ParserGo.R_BRACKET)
         except RecognitionException as re:
@@ -7484,9 +7883,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class TypeAssertionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -7497,7 +7897,8 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.L_PAREN, 0)
 
         def type_(self):
-            return self.getTypedRuleContext(ParserGo.Type_Context, 0)
+            return self.getTypedRuleContext(ParserGo.Type_Context,0)
+
 
         def R_PAREN(self):
             return self.getToken(ParserGo.R_PAREN, 0)
@@ -7505,19 +7906,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_typeAssertion
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterTypeAssertion"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTypeAssertion" ):
                 listener.enterTypeAssertion(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitTypeAssertion"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTypeAssertion" ):
                 listener.exitTypeAssertion(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeAssertion"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeAssertion" ):
                 return visitor.visitTypeAssertion(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def typeAssertion(self):
 
@@ -7541,9 +7945,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ArgumentsContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -7554,15 +7959,17 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.R_PAREN, 0)
 
         def expressionList(self):
-            return self.getTypedRuleContext(ParserGo.ExpressionListContext, 0)
+            return self.getTypedRuleContext(ParserGo.ExpressionListContext,0)
+
 
         def type_(self):
-            return self.getTypedRuleContext(ParserGo.Type_Context, 0)
+            return self.getTypedRuleContext(ParserGo.Type_Context,0)
+
 
         def ELLIPSIS(self):
             return self.getToken(ParserGo.ELLIPSIS, 0)
 
-        def COMMA(self, i: int = None):
+        def COMMA(self, i:int=None):
             if i is None:
                 return self.getTokens(ParserGo.COMMA)
             else:
@@ -7571,47 +7978,39 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_arguments
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterArguments"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterArguments" ):
                 listener.enterArguments(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitArguments"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitArguments" ):
                 listener.exitArguments(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitArguments"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArguments" ):
                 return visitor.visitArguments(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def arguments(self):
 
         localctx = ParserGo.ArgumentsContext(self, self._ctx, self.state)
         self.enterRule(localctx, 190, self.RULE_arguments)
-        self._la = 0  # Token type
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 906
             self.match(ParserGo.L_PAREN)
             self.state = 921
             self._errHandler.sync(self)
-            _la = self.TokenStream.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                    (1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (
-                    1 << ParserGo.CHAN) | (1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (
-                            1 << ParserGo.L_PAREN) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.EXCLAMATION) | (
-                            1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (
-                            1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (1 << ParserGo.RECEIVE))) != 0) or (
-                    (((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & (
-                    (1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (
-                    1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (
-                            1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (
-                            1 << (ParserGo.RAW_STRING_LIT - 64)) | (
-                            1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
+            _la = self._input.LA(1)
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ParserGo.FUNC) | (1 << ParserGo.INTERFACE) | (1 << ParserGo.MAP) | (1 << ParserGo.STRUCT) | (1 << ParserGo.CHAN) | (1 << ParserGo.NIL_LIT) | (1 << ParserGo.IDENTIFIER) | (1 << ParserGo.L_PAREN) | (1 << ParserGo.L_BRACKET) | (1 << ParserGo.EXCLAMATION) | (1 << ParserGo.PLUS) | (1 << ParserGo.MINUS) | (1 << ParserGo.CARET) | (1 << ParserGo.STAR) | (1 << ParserGo.AMPERSAND) | (1 << ParserGo.RECEIVE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (ParserGo.DECIMAL_LIT - 64)) | (1 << (ParserGo.OCTAL_LIT - 64)) | (1 << (ParserGo.HEX_LIT - 64)) | (1 << (ParserGo.FLOAT_LIT - 64)) | (1 << (ParserGo.IMAGINARY_LIT - 64)) | (1 << (ParserGo.RUNE_LIT - 64)) | (1 << (ParserGo.RAW_STRING_LIT - 64)) | (1 << (ParserGo.INTERPRETED_STRING_LIT - 64)))) != 0):
                 self.state = 913
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self.TokenStream, 98, self._ctx)
+                la_ = self._interp.adaptivePredict(self._input,98,self._ctx)
                 if la_ == 1:
                     self.state = 907
                     self.expressionList()
@@ -7622,28 +8021,34 @@ class ParserGo(Parser):
                     self.type_()
                     self.state = 911
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self.TokenStream, 97, self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input,97,self._ctx)
                     if la_ == 1:
                         self.state = 909
                         self.match(ParserGo.COMMA)
                         self.state = 910
                         self.expressionList()
 
+
                     pass
+
 
                 self.state = 916
                 self._errHandler.sync(self)
-                _la = self.TokenStream.LA(1)
-                if _la == ParserGo.ELLIPSIS:
+                _la = self._input.LA(1)
+                if _la==ParserGo.ELLIPSIS:
                     self.state = 915
                     self.match(ParserGo.ELLIPSIS)
 
+
                 self.state = 919
                 self._errHandler.sync(self)
-                _la = self.TokenStream.LA(1)
-                if _la == ParserGo.COMMA:
+                _la = self._input.LA(1)
+                if _la==ParserGo.COMMA:
                     self.state = 918
                     self.match(ParserGo.COMMA)
+
+
+
 
             self.state = 923
             self.match(ParserGo.R_PAREN)
@@ -7655,14 +8060,16 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class MethodExprContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def receiverType(self):
-            return self.getTypedRuleContext(ParserGo.ReceiverTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.ReceiverTypeContext,0)
+
 
         def DOT(self):
             return self.getToken(ParserGo.DOT, 0)
@@ -7673,19 +8080,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_methodExpr
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterMethodExpr"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterMethodExpr" ):
                 listener.enterMethodExpr(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitMethodExpr"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitMethodExpr" ):
                 listener.exitMethodExpr(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitMethodExpr"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMethodExpr" ):
                 return visitor.visitMethodExpr(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def methodExpr(self):
 
@@ -7707,14 +8117,16 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class ReceiverTypeContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def typeName(self):
-            return self.getTypedRuleContext(ParserGo.TypeNameContext, 0)
+            return self.getTypedRuleContext(ParserGo.TypeNameContext,0)
+
 
         def L_PAREN(self):
             return self.getToken(ParserGo.L_PAREN, 0)
@@ -7726,24 +8138,28 @@ class ParserGo(Parser):
             return self.getToken(ParserGo.STAR, 0)
 
         def receiverType(self):
-            return self.getTypedRuleContext(ParserGo.ReceiverTypeContext, 0)
+            return self.getTypedRuleContext(ParserGo.ReceiverTypeContext,0)
+
 
         def getRuleIndex(self):
             return ParserGo.RULE_receiverType
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterReceiverType"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterReceiverType" ):
                 listener.enterReceiverType(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitReceiverType"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitReceiverType" ):
                 listener.exitReceiverType(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitReceiverType"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReceiverType" ):
                 return visitor.visitReceiverType(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def receiverType(self):
 
@@ -7752,7 +8168,7 @@ class ParserGo(Parser):
         try:
             self.state = 938
             self._errHandler.sync(self)
-            token = self.TokenStream.LA(1)
+            token = self._input.LA(1)
             if token in [ParserGo.IDENTIFIER]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 929
@@ -7764,7 +8180,7 @@ class ParserGo(Parser):
                 self.match(ParserGo.L_PAREN)
                 self.state = 934
                 self._errHandler.sync(self)
-                token = self.TokenStream.LA(1)
+                token = self._input.LA(1)
                 if token in [ParserGo.STAR]:
                     self.state = 931
                     self.match(ParserGo.STAR)
@@ -7792,9 +8208,10 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
+
     class EosContext(ParserRuleContext):
 
-        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -7807,19 +8224,22 @@ class ParserGo(Parser):
         def getRuleIndex(self):
             return ParserGo.RULE_eos
 
-        def enterRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "enterEos"):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterEos" ):
                 listener.enterEos(self)
 
-        def exitRule(self, listener: ParseTreeListener):
-            if hasattr(listener, "exitEos"):
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitEos" ):
                 listener.exitEos(self)
 
-        def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitEos"):
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEos" ):
                 return visitor.visitEos(self)
             else:
                 return visitor.visitChildren(self)
+
+
+
 
     def eos(self):
 
@@ -7828,7 +8248,7 @@ class ParserGo(Parser):
         try:
             self.state = 944
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self.TokenStream, 104, self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,104,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 940
@@ -7844,17 +8264,17 @@ class ParserGo(Parser):
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 942
-                if not lineTerminatorAhead():
+                if not 'lineTerminatorAhead()':
                     from antlr4.error.Errors import FailedPredicateException
-                    raise FailedPredicateException(self, "lineTerminatorAhead()")
+                    raise FailedPredicateException(self, "'lineTerminatorAhead()'")
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 943
-                if not checkPreviousTokenText("}"):
+                if not 'checkPreviousTokenText("}")':
                     from antlr4.error.Errors import FailedPredicateException
-                    raise FailedPredicateException(self, "checkPreviousTokenText(\"}\")")
+                    raise FailedPredicateException(self, "'checkPreviousTokenText(\"}\")'")
                 pass
 
 
@@ -7866,7 +8286,9 @@ class ParserGo(Parser):
             self.exitRule()
         return localctx
 
-    def sempred(self, localctx: RuleContext, ruleIndex: int, predIndex: int):
+
+
+    def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
         if self._predicates == None:
             self._predicates = dict()
         self._predicates[64] = self.methodSpec_sempred
@@ -7881,45 +8303,55 @@ class ParserGo(Parser):
         else:
             return pred(localctx, predIndex)
 
-    def methodSpec_sempred(self, localctx: MethodSpecContext, predIndex: int):
-        if predIndex == 0:
-            return noTerminatorAfterParams(2)
+    def methodSpec_sempred(self, localctx:MethodSpecContext, predIndex:int):
+            if predIndex == 0:
+                return 'noTerminatorAfterParams(2)'
+         
 
-    def signature_sempred(self, localctx: SignatureContext, predIndex: int):
-        if predIndex == 1:
-            return noTerminatorAfterParams(1)
+    def signature_sempred(self, localctx:SignatureContext, predIndex:int):
+            if predIndex == 1:
+                return 'noTerminatorAfterParams(1)'
+         
 
-    def expression_sempred(self, localctx: ExpressionContext, predIndex: int):
-        if predIndex == 2:
-            return self.precpred(self._ctx, 5)
+    def expression_sempred(self, localctx:ExpressionContext, predIndex:int):
+            if predIndex == 2:
+                return self.precpred(self._ctx, 5)
+         
 
-        if predIndex == 3:
-            return self.precpred(self._ctx, 4)
+            if predIndex == 3:
+                return self.precpred(self._ctx, 4)
+         
 
-        if predIndex == 4:
-            return self.precpred(self._ctx, 3)
+            if predIndex == 4:
+                return self.precpred(self._ctx, 3)
+         
 
-        if predIndex == 5:
-            return self.precpred(self._ctx, 2)
+            if predIndex == 5:
+                return self.precpred(self._ctx, 2)
+         
 
-        if predIndex == 6:
-            return self.precpred(self._ctx, 1)
+            if predIndex == 6:
+                return self.precpred(self._ctx, 1)
+         
 
-    def primaryExpr_sempred(self, localctx: PrimaryExprContext, predIndex: int):
-        if predIndex == 7:
-            return self.precpred(self._ctx, 1)
+    def primaryExpr_sempred(self, localctx:PrimaryExprContext, predIndex:int):
+            if predIndex == 7:
+                return self.precpred(self._ctx, 1)
+         
 
-    def fieldDecl_sempred(self, localctx: FieldDeclContext, predIndex: int):
-        if predIndex == 8:
-            return noTerminatorBetween(2)
+    def fieldDecl_sempred(self, localctx:FieldDeclContext, predIndex:int):
+            if predIndex == 8:
+                return 'noTerminatorBetween(2)'
+         
 
-    def eos_sempred(self, localctx: EosContext, predIndex: int):
-        if predIndex == 9:
-            return lineTerminatorAhead()
+    def eos_sempred(self, localctx:EosContext, predIndex:int):
+            if predIndex == 9:
+                return 'lineTerminatorAhead()'
+         
 
-        if predIndex == 10:
-            return checkPreviousTokenText("}")
-
+            if predIndex == 10:
+                return 'checkPreviousTokenText("}")'
+         
 
 
 

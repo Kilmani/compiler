@@ -299,7 +299,7 @@ channelType
     ;
 
 methodSpec
-    : {noTerminatorAfterParams(2)}? IDENTIFIER parameters result
+    : {'noTerminatorAfterParams(2)'}? IDENTIFIER parameters result
     | typeName
     | IDENTIFIER parameters
     ;
@@ -309,7 +309,7 @@ functionType
     ;
 
 signature
-    : {noTerminatorAfterParams(1)}? parameters result
+    : {'noTerminatorAfterParams(1)'}? parameters result
     | parameters
     ;
 
@@ -435,7 +435,7 @@ structType
     ;
 
 fieldDecl
-    : ({noTerminatorBetween(2)}? identifierList type_ | anonymousField) string_?
+    : ({'noTerminatorBetween(2)'}? identifierList type_ | anonymousField) string_?
     ;
 
 string_
@@ -479,7 +479,7 @@ receiverType
 eos
     : ';'
     | EOF
-    | {lineTerminatorAhead()}?
-    | {checkPreviousTokenText("}")}?
+    | {'lineTerminatorAhead()'}?
+    | {'checkPreviousTokenText("}")'}?
     ;
 
