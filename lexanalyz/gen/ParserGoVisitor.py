@@ -3,7 +3,7 @@ from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .ParserGo import ParserGo
 else:
-    from lexanalyz.gen import ParserGo
+    from lexanalyz.gen.ParserGo import *
 
 # This class defines a complete generic visitor for a parse tree produced by ParserGo.
 

@@ -32,6 +32,8 @@
  */
 lexer grammar LexerGo;
 
+
+
 BREAK                  : 'break';
 DEFAULT                : 'default';
 FUNC                   : 'func';
