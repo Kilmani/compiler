@@ -7,7 +7,7 @@ if sys.version_info[1] > 5:
 	from typing import TextIO
 else:
 	from typing.io import TextIO
-
+from lexanalyz.GeneratedIR import GeneratedIR
 
 def serializedATN():
     with StringIO() as buf:
@@ -723,13 +723,10 @@ class ParserGo ( Parser ):
         self._predicates = None
 
 
-
-
     class SourceFileContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
-            self.parser = parser
 
         def packageClause(self):
             return self.getTypedRuleContext(ParserGo.PackageClauseContext,0)
@@ -861,6 +858,7 @@ class ParserGo ( Parser ):
             return self.getToken(ParserGo.PACKAGE, 0)
 
         def IDENTIFIER(self):
+
             return self.getToken(ParserGo.IDENTIFIER, 0)
 
         def getRuleIndex(self):

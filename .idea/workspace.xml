@@ -25,22 +25,24 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Python3.8.0/pythonw.exe" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Python\compiler\gen" />
-      <recent name="D:\Python\compiler\lexanalyz\gen" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Python\compiler\library\antlr_ast" />
+      <recent name="D:\Python\compiler" />
       <recent name="D:\Python\compiler\lexanalyz" />
       <recent name="D:\Python\compiler\lexanalyz\gen" />
       <recent name="D:\Python\compiler\gen" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Python\compiler\gen" />
+      <recent name="D:\Python\compiler\lexanalyz\gen" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.lexanalyzator">
-    <configuration name="ParserGoListener" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Main (1)">
+    <configuration name="Main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="compiler" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -48,11 +50,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lexanalyz/gen" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lexanalyz" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lexanalyz/gen/ParserGoListener.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lexanalyz/Main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -61,7 +63,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ParserGoVisitor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="compiler" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -69,11 +71,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lexanalyz/gen" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lexanalyz" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lexanalyz/gen/ParserGoVisitor.py" />
+      <option name="SCRIPT_NAME" value="D:\Python\compiler\lexanalyz\Main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -103,7 +105,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lexanalyzator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="irCompilation (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="compiler" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -115,7 +117,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lexanalyz/lexanalyzator.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lexanalyz/irCompilation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -124,7 +126,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="irCompiler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="compiler" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -132,11 +134,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="D:/Учеба/3 курс/МОнахов/2 семестр/Курса/antl4-llvm-language-master" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lexanalyz" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:/Учеба/3 курс/МОнахов/2 семестр/Курса/antl4-llvm-language-master/run.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lexanalyz/irCompiler.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -147,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.lexanalyzator" />
-        <item itemvalue="Python.run" />
+        <item itemvalue="Python.Main (1)" />
+        <item itemvalue="Python.irCompiler" />
+        <item itemvalue="Python.irCompilation (1)" />
+        <item itemvalue="Python.Main" />
         <item itemvalue="Python.PrintTree" />
-        <item itemvalue="Python.ParserGoVisitor" />
-        <item itemvalue="Python.ParserGoListener" />
       </list>
     </recent_temporary>
   </component>
@@ -169,65 +171,120 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585251958500">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591710622353">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1585251958500" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1590134840917">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1591710622353" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1591572875046">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590134840917" />
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1590178771337">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591572875046" />
+    <state width="1515" height="263" key="GridCell.Tab.0.bottom" timestamp="1591793567171">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590178771337" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1590178771337">
+    <state width="1515" height="263" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591793567171" />
+    <state width="1515" height="263" key="GridCell.Tab.0.center" timestamp="1591793567171">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590178771337" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1590178771337">
+    <state width="1515" height="263" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591793567171" />
+    <state width="1515" height="263" key="GridCell.Tab.0.left" timestamp="1591793567171">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590178771337" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1590178771337">
+    <state width="1515" height="263" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591793567171" />
+    <state width="1515" height="263" key="GridCell.Tab.0.right" timestamp="1591793567171">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590178771337" />
-    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1590041273329">
+    <state width="1515" height="263" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591793567171" />
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1591542140447">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590041273329" />
-    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1590041273329">
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591542140447" />
+    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1591542140447">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590041273329" />
-    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1590041273328">
+    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591542140447" />
+    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1591542140447">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590041273328" />
-    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1590041273329">
+    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591542140447" />
+    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1591542140447">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590041273329" />
-    <state x="277" y="55" key="SettingsEditor" timestamp="1590134369614">
+    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591542140447" />
+    <state x="450" y="110" key="SettingsEditor" timestamp="1591788791380">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590134369614" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1590133181485">
+    <state x="450" y="110" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591788791380" />
+    <state x="274" y="89" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1591773279052">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1590133181485" />
+    <state x="274" y="89" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1591773279052" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1591773279052">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1591773279052" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1591613688771">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1591613688771" />
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590033650315">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1590033650315" />
-    <state x="462" y="10" width="611" height="804" key="find.popup" timestamp="1585254736421">
+    <state x="399" y="100" width="1151" height="810" key="dock-window-1" timestamp="1591791428604">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="462" y="10" width="611" height="804" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1585254736421" />
+    <state x="399" y="100" width="1151" height="810" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1591791428604" />
+    <state x="462" y="10" width="611" height="804" key="find.popup" timestamp="1591690427220">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="462" y="10" width="611" height="804" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1591690427220" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1590268743537">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1590268743537" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../Python3.8.0/Lib/site-packages/llvmlite/ir/builder.py</url>
+          <line>176</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../Python3.8.0/Lib/site-packages/llvmlite/ir/builder.py</url>
+          <line>178</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../Python3.8.0/Lib/site-packages/llvmlite/ir/builder.py</url>
+          <line>177</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../Python3.8.0/Lib/site-packages/llvmlite/ir/builder.py</url>
+          <line>179</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../Python3.8.0/Lib/site-packages/llvmlite/ir/builder.py</url>
+          <line>180</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lexanalyz/Main.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

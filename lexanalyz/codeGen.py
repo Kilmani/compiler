@@ -34,7 +34,7 @@ class CodeGen():
         self.engine = engine
 
     def _declare_print_function(self):
-        # Функция Printf
+        # Declare Printf function
         voidptr_ty = ir.IntType(8).as_pointer()
         printf_ty = ir.FunctionType(ir.IntType(32), [voidptr_ty], var_arg=True)
         printf = ir.Function(self.module, printf_ty, name="printf")
@@ -45,12 +45,12 @@ class CodeGen():
         Compile the LLVM IR string with the given engine.
         The compiled module object is returned.
         """
-        # Создание LLVM модуля
+        # Create a LLVM module object from the IR
         self.builder.ret_void()
         llvm_ir = str(self.module)
         mod = self.binding.parse_assembly(llvm_ir)
         mod.verify()
-        # Теперь добавляем модуль и убеждаемся, что он готов к выполнению
+        # Now add the module and make sure it is ready for execution
         self.engine.add_module(mod)
         self.engine.finalize_object()
         self.engine.run_static_constructors()
